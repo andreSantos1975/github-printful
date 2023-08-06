@@ -1,11 +1,12 @@
+
+import { Children } from 'react';
 import { createBrowserRouter, RouterProvider, Route, Outlet } from 'react-router-dom';
-import './App.css';
 import { Home } from './pages/home/Home';
 import { Products } from './pages/products/Products';
 import { Product } from './pages/product/Product';
 import { Navbar } from './components/navbar/Navbar';
 import { Footer } from './components/footer/Footer';
-import { Children } from 'react';
+import './app.scss';
 
 const Layout = () => {
   return (
