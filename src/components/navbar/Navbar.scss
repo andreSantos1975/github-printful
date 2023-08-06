@@ -38,20 +38,26 @@
             gap: 15px;
             cursor: pointer;
 
-            .cartIcon {
-               
-            }
+            .cartIcon {}
 
-            
+
             .cartIcon span {
-                position: absolute; /* Posição absoluta em relação ao elemento pai (.cartIcon) */
-                top: -1px; /* Posiciona o número 6 pixels acima do ícone do carrinho */
-                right: 16px; /* Posiciona o número 6 pixels à direita do ícone do carrinho */
-                padding: 3px 5px; /* Adicione algum espaço entre o número e o fundo do cartão */
-                border-radius: 50%; /* Tornar o número circular */
-                background-color: #43cbcb; /* Cor de fundo do número */
-                font-size: 10px; /* Tamanho de fonte do número */
-                color: #ffffff; /* Cor do número */
+                position: absolute;
+                /* Posição absoluta em relação ao elemento pai (.cartIcon) */
+                top: -1px;
+                /* Posiciona o número 6 pixels acima do ícone do carrinho */
+                right: 16px;
+                /* Posiciona o número 6 pixels à direita do ícone do carrinho */
+                padding: 3px 5px;
+                /* Adicione algum espaço entre o número e o fundo do cartão */
+                border-radius: 50%;
+                /* Tornar o número circular */
+                background-color: #43cbcb;
+                /* Cor de fundo do número */
+                font-size: 10px;
+                /* Tamanho de fonte do número */
+                color: #ffffff;
+                /* Cor do número */
             }
         }
 
