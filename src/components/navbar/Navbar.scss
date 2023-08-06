@@ -9,7 +9,7 @@
         .item {
             display: flex;
             align-items: center;
-            font-size: 18px; /* Aplica o tamanho de fonte para todos os elementos .item dentro de .wrapper */
+            font-size: 18px; 
         }
 
         .left {
@@ -17,10 +17,12 @@
             align-items: center;
             gap: 25px;
         }
-          /* Classe específica para .center com tamanho de fonte diferente */
-          .center-custom {
-            font-size: 24px; /* Tamanho de fonte diferente para .center-custom */
+         
+          .center {
+            font-size: 24px; 
+            letter-spacing: 2px;
         }
+
         .right {
             display: flex;
             align-items: center;
