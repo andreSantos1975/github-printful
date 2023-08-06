@@ -13,49 +13,50 @@ export const Navbar = () => {
     return (
         <div className='navbar'>
             <div className='wrapper'>
-                <div className='left'></div>
-                <div className='item'>
-                   <img src='img/en.png' alt='' />
-                   <KeyboardArrowDownIcon />
+                <div className='left'>
+                    <div className='item'>
+                        <img src='../img/en.png' alt='' />
+                        <KeyboardArrowDownIcon />
+                    </div>
+                    <div className='item'>
+                        <span>USD</span>
+                        <KeyboardArrowDownIcon />
+                    </div>
+                    <div className='item'>
+                        <Link to='/product/1'>Women</Link>
+                    </div>
+                    <div className='item'>
+                        <Link to='/product/2'>Men</Link>
+                    </div>
+                    <div className='item'>
+                        <Link to='/product/3'>Children</Link>
+                    </div>
                 </div>
-                <div className='item'>
-                  <span>USD</span>
-                  <KeyboardArrowDownIcon />
-                </div>
-                <div className='item'>
-                  <Link to='/product/1'>Women</Link>
-                </div>
-                <div className='item'>
-                  <Link to='/product/2'>Men</Link>
-                </div>
-                <div className='item'>
-                  <Link to='/product/3'>Children</Link>
-                </div>
-                <div className='center'>
+                <div className='center center-custom'>
                     <Link to='/'>Melzinha</Link>
                 </div>
                 <div className='right'>
-                <div className='center'>
-                    <Link to='/'>Homepage</Link>
-                </div>
-                <div className='center'>
-                    <Link to='/'>About</Link>
-                </div>
-                <div className='center'>
-                    <Link to='/'>Contact</Link>
-                </div>
-                <div className='center'>
-                    <Link to='/'>Stores</Link>
-                </div>
-                <div className='icons'>
-                   <SearchIcon />
-                   <PersonOutlineOutlinedIcon />
-                   <FavoriteBorderOutlinedIcon />
-                   <div className='cartIcon'>
-                    <ShoppingCartOutlinedIcon />
-                    <span>0</span>
-                   </div>
-                </div>
+                    <div className='center'>
+                        <Link to='/'>Homepage</Link>
+                    </div>
+                    <div className='center'>
+                        <Link to='/'>About</Link>
+                    </div>
+                    <div className='center'>
+                        <Link to='/'>Contact</Link>
+                    </div>
+                    <div className='center'>
+                        <Link to='/'>Stores</Link>
+                    </div>
+                    <div className='icons'>
+                        <SearchIcon />
+                        <PersonOutlineOutlinedIcon />
+                        <FavoriteBorderOutlinedIcon />
+                        <div className='cartIcon'>
+                            <ShoppingCartOutlinedIcon />
+                            <span>0</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

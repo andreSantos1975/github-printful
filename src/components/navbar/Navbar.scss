@@ -1,3 +1,33 @@
 .navbar {
-    
+    height: 80px;
+
+    .wrapper {
+        padding: 10px 30px;
+        display: flex;
+        justify-content: space-between;
+
+        .item {
+            display: flex;
+            align-items: center;
+            font-size: 18px; /* Aplica o tamanho de fonte para todos os elementos .item dentro de .wrapper */
+        }
+
+        .left {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+          /* Classe específica para .center com tamanho de fonte diferente */
+          .center-custom {
+            font-size: 24px; /* Tamanho de fonte diferente para .center-custom */
+        }
+        .right {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            font-size: 18px;
+        }
+
+     
+    }
 }
