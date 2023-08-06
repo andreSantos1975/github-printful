@@ -38,15 +38,12 @@
             gap: 15px;
             cursor: pointer;
 
-            .cartIcon {}
-
-
             .cartIcon span {
                 position: absolute;
                 /* Posição absoluta em relação ao elemento pai (.cartIcon) */
                 top: -1px;
                 /* Posiciona o número 6 pixels acima do ícone do carrinho */
-                right: 16px;
+                right: 23px;
                 /* Posiciona o número 6 pixels à direita do ícone do carrinho */
                 padding: 3px 5px;
                 /* Adicione algum espaço entre o número e o fundo do cartão */
