@@ -3,14 +3,21 @@ import EastOutlinedIcon from "@mui/icons-material/EastOutlined";
 import WestOutlinedIcon from "@mui/icons-material/WestOutlined";
 import './Slider.scss';
 
+import image1 from '../slider/image/dog1.jpg'
+import image2 from '../slider/image/dog2.jpg'
+import image3 from '../slider/image/dog3.jpg'
+
+
+
+
 export const Slider = () => {
 
     const [currentSlide, setCurrentSlide] = useState(0);
 
     const data = [
-        "https://images.pexels.com/photos/2607544/pexels-photo-2607544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "https://images.pexels.com/photos/160846/french-bulldog-summer-smile-joy-160846.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "https://images.pexels.com/photos/16652420/pexels-photo-16652420/free-photo-of-animal-bicho-fofo-bonitinho.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        image1,
+        image2,
+        image3,
     ];
 
 
