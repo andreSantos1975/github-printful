@@ -1,6 +1,6 @@
 
 import { Children } from 'react';
-import { createBrowserRouter, RouterProvider, Route, Outlet } from 'react-router-dom';
+import { BrowserRouter, RouterProvider, Route, Outlet } from 'react-router-dom';
 import { Home } from './pages/home/Home';
 import { Products } from './pages/products/Products';
 import { Product } from './pages/product/Product';
@@ -12,20 +12,19 @@ const Layout = () => {
   return (
     <div className='app'>
       <Navbar />
-       <Home />
-       <Outlet />
-       <Footer />
+      <Outlet />
+      <Footer />
     </div>
   )
 }
 
-const router = createBrowserRouter([
+const router = BrowserRouter([
   {
     path: "/",
     element: <Layout />,
     children: [
       {
-        path: '/home',
+        path: '/',
         element: <Home />
       },
       {

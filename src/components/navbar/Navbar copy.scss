@@ -1,15 +1,5 @@
 .navbar {
-    position: fixed;
-    height: 70px;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #fff;
-    /* Adicione a cor de fundo desejada para o navbar */
-    z-index: 100;
-    /* Adicione um valor alto para garantir que o navbar fique acima do conteúdo */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* Opcional: Adicione uma sombra ao navbar */
+    height: 80px;
 
     .wrapper {
         padding: 10px 30px;
