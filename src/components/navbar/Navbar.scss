@@ -19,6 +19,7 @@
 
         .item {
             display: flex;
+            margin-top: 9px;
             align-items: center;
             font-size: 18px;
         }
@@ -43,6 +44,7 @@
 
         .icons {
             display: flex;
+            margin-top: 13px;
             gap: 15px;
             color: #777;
             gap: 15px;
@@ -51,7 +53,7 @@
             .cartIcon span {
                 position: absolute;
                 /* Posição absoluta em relação ao elemento pai (.cartIcon) */
-                top: -1px;
+                top: 10px;
                 /* Posiciona o número 6 pixels acima do ícone do carrinho */
                 right: 23px;
                 /* Posiciona o número 6 pixels à direita do ícone do carrinho */
@@ -67,6 +69,8 @@
                 /* Cor do número */
             }
         }
+
+      
 
 
     }

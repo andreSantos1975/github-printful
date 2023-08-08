@@ -1,0 +1,55 @@
+Para implementar a lógica de uma página com um ícone que muda a linguagem do site, você pode seguir os passos abaixo:
+
+Criar um estado para a linguagem atual e uma função para alterar o estado:
+jsx
+Copy code
+import React, { useState } from 'react';
+// ... (seus imports)
+
+export const Navbar = () => {
+  // Estado para a linguagem atual
+  const [language, setLanguage] = useState('en'); // Valor inicial 'en' para inglês
+
+  // Função para mudar a linguagem
+  const changeLanguage = (newLanguage) => {
+    setLanguage(newLanguage);
+    // Aqui você pode implementar lógica para atualizar a tradução do site com base na nova linguagem
+  };
+
+  // Resto do seu código...
+}
+Adicionar o ícone de mudança de linguagem e vincular a função para alterar a linguagem:
+jsx
+Copy code
+import React, { useState } from 'react';
+// ... (seus imports)
+
+export const Navbar = () => {
+  // ... (seu código)
+
+  return (
+    <div className='navbar'>
+      <div className='wrapper'>
+        <div className='left'>
+          {/* Ícone para mudar a linguagem */}
+          <div className='item' onClick={() => changeLanguage('en')}>
+            <img src='../img/en.png' alt='' />
+            <KeyboardArrowDownIcon />
+          </div>
+          <div className='item' onClick={() => changeLanguage('pt')}>
+            <img src='../img/pt.png' alt='' />
+            <KeyboardArrowDownIcon />
+          </div>
+          {/* Resto do seu código... */}
+        </div>
+        {/* Resto do seu código... */}
+      </div>
+    </div>
+  );
+}
+Com a função changeLanguage, você pode atualizar o estado da linguagem (language) para a nova linguagem quando o ícone for 
+clicado. Além disso, você pode implementar lógica para atualizar a tradução do site com base na nova linguagem. Isso pode envolver 
+a troca de arquivos de tradução, re-renderização de componentes com base na nova linguagem, ou qualquer outra lógica específica da 
+sua aplicação para gerenciar a mudança de idioma.
+Lembrando que a implementação específica da lógica de mudança de linguagem dependerá da arquitetura e do fluxo de tradução do seu 
+projeto. Portanto, é importante adaptar a lógica acima para se adequar ao seu caso de uso específico.

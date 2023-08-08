@@ -23,16 +23,16 @@ export const Navbar = () => {
                         <KeyboardArrowDownIcon />
                     </div>
                     <div className='item'>
-                        <Link className='link' to='/product/1'>Women</Link>
+                        <Link className='link' to='/product/1'>Mulher</Link>
                     </div>
                     <div className='item'>
-                        <Link className='link' to='/product/2'>Men</Link>
+                        <Link className='link' to='/product/2'>Homen</Link>
                     </div>
                     <div className='item'>
-                        <Link className='link' to='/product/3'>Children</Link>
+                        <Link className='link' to='/product/3'>Criança</Link>
                     </div>
                 </div>
-                <div className='center center-custom'>
+                <div className='center center-custom' style={{ marginBottom: '-5px' }}>
                     <Link className='link' to='/'>Melzinha</Link>
                 </div>
                 <div className='right'>
@@ -40,13 +40,13 @@ export const Navbar = () => {
                         <Link className='link' to='/'>Homepage</Link>
                     </div>
                     <div className='item'>
-                        <Link className='link' to='/'>About</Link>
+                        <Link className='link' to='/'>Sobre</Link>
                     </div>
                     <div className='item'>
-                        <Link className='link' to='/'>Contact</Link>
+                        <Link className='link' to='/'>Contatos</Link>
                     </div>
                     <div className='item'>
-                        <Link className='link' to='/'>Stores</Link>
+                        <Link className='link' to='/'>Loja</Link>
                     </div>
                     <div className='icons'>
                         <SearchIcon />
