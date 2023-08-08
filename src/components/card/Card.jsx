@@ -8,6 +8,7 @@ export const Card = ({ item }) => {
   return (
     <div className='card'>
       <div className='image'>
+        {item.isNew && <span>Nova coleção</span>}
         <Link
           to={`/product/${item.id}`}
           onMouseEnter={() => setShowSecondImage(true)}

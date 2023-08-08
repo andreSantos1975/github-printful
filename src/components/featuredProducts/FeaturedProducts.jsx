@@ -15,7 +15,7 @@ export const FeaturedProducts = ({ type }) => {
       id: 1,
       image: image1,
       image2: image2,
-      title: "Jaqueta de couro cor preta",
+      title: "Moleton com capuz cor verde",
       isNew: true,
       oldPrice: 435,
       price: 345.90
@@ -34,7 +34,7 @@ export const FeaturedProducts = ({ type }) => {
       image: image4,
       image2: null,
       title: "Another Product",
-      isNew: false,
+      isNew: true,
       oldPrice: 200,
       price: 150.00
     },
@@ -52,7 +52,7 @@ export const FeaturedProducts = ({ type }) => {
   return (
     <div className='featuredProducts'>
       <div className='top'>
-        <h1>{type}Produtos</h1>
+        <h1>{type} coleção</h1>
         <p>   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
           suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
