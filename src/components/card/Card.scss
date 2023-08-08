@@ -1,4 +1,3 @@
-
 .card {
     width: 280px;
     display: flex;
@@ -11,10 +10,29 @@
        overflow: hidden;
        position: relative;
 
-       img {
-           width: 100%;
-           height: 100%;
-           object-fit: cover;
+       .mainImg,
+       .secondImg {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          transition: opacity 0.3s ease-in-out; // Add transition for smoother effect
+       }
+
+       .secondImg {
+          z-index: 0;
+          opacity: 0; // Initially hidden
+       }
+
+       &:hover {
+          .mainImg {
+              opacity: 0; // Hide mainImg on hover
+          }
+
+          .secondImg {
+              z-index: 2;
+              opacity: 1; // Show secondImg on hover
+          }
        }
     }
 }
