@@ -1,0 +1,43 @@
+
+.contact {
+  background-color: rgb(107, 201, 244);
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+  }
+
+  button {
+    padding: 10px;
+    color: white;
+    background-color: #333;
+    border-radius: 5px 0 0 5px;
+    border: none;
+  }
+
+  span {
+    margin-right: auto; /* Empurra o <span> para a esquerda */
+  
+  }
+
+  .icons {
+    display: flex;
+    justify-content: flex-end; /* Alinha os ícones à direita */
+   
+  
+    .icon {
+      margin-left: 10px;
+    }
+}
+}
