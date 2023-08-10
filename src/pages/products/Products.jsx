@@ -18,15 +18,15 @@ export const Products = () => {
           <h2>Produdos por Categoria</h2>
           <div className="inputItem">
             <input type='checkbox' id='1' value={1}/>
-            <label htmlFor='1'>Shoes</label>
+            <label htmlFor='1'>Camisas</label>
           </div>
           <div className="inputItem">
             <input type='checkbox' id='2' value={2}/>
-            <label htmlFor='1'>Skirts</label>
+            <label htmlFor='1'>Casacos</label>
           </div>
           <div className="inputItem">
             <input type='checkbox' id='3' value={3}/>
-            <label htmlFor='1'>Coarts</label>
+            <label htmlFor='1'>Bonés</label>
           </div>
         </div>
         <div className='filterItem'>
@@ -41,11 +41,11 @@ export const Products = () => {
           <h2>Ordenar por</h2>
           <div className="inputItem">
             <input type="radio" id='asc' value='asc' name='price' onClick={e =>setSort("asc")}/>
-            <label htmlFor="asc">Price (Lowest first)</label>
+            <label htmlFor="asc">Menor (Preço)</label>
           </div>
           <div className="inputItem">
             <input type="radio" id='desc' value='desc' name='price'  onClick={e =>setSort("desc")}/>
-            <label htmlFor="desc">Price (Hight first)</label>
+            <label htmlFor="desc">Maior (Preço)</label>
           </div>
         </div>
       </div>

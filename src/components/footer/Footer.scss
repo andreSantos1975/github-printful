@@ -4,10 +4,12 @@
     .top {
         display: flex;
         gap: 50px;
+       
 
         .item {
             flex: 1;
             display: flex;
+            margin-top: 2px;
             flex-direction: column;
             gap: 10px;
             text-align: justify;

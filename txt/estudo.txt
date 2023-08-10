@@ -53,3 +53,33 @@ a troca de arquivos de tradução, re-renderização de componentes com base na 
 sua aplicação para gerenciar a mudança de idioma.
 Lembrando que a implementação específica da lógica de mudança de linguagem dependerá da arquitetura e do fluxo de tradução do seu 
 projeto. Portanto, é importante adaptar a lógica acima para se adequar ao seu caso de uso específico.
+
+===================================================================================================================
+------------------------------------------------------------------10/08/2023---------------------------------------
+-------------------------------------------------------------------------------------------------------------------
+Copy code
+import React, { useState } from 'react';
+import './Product.scss';
+import image1 from './image/list3.jpg';
+import image2 from './image/list6.jpg';
+
+export const Product = () => {
+
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+
+  const images = [
+    image1,
+    image2
+  ];
+
+  const handleThumbnailClick = (index) => {
+    setSelectedImageIndex(index);
+  };
+
+  return (
+    <div className='product'>
+      <div className='left'>
+        <div className="image">
+          <img src={images[0]} alt="" onClick={() => handleThumbnailClick(0)} />
+          <img src={images[1]} alt="" onClick={() => handleThumbnailClick(1)} />
+        </div>
