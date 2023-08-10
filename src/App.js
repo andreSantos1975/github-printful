@@ -1,5 +1,3 @@
-
-import { Children } from 'react';
 import { createBrowserRouter, RouterProvider, Route, Outlet } from 'react-router-dom';
 import { Home } from './pages/home/Home';
 import { Products } from './pages/products/Products';
@@ -12,11 +10,10 @@ const Layout = () => {
   return (
     <div className='app'>
       <Navbar />
-       <Home />
-       <Outlet />
-       <Footer />
+      <Outlet /> 
+      <Footer />
     </div>
-  )
+  );
 }
 
 const router = createBrowserRouter([
@@ -25,7 +22,7 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       {
-        path: '/home',
+        path: '/',
         element: <Home />
       },
       {
@@ -38,8 +35,7 @@ const router = createBrowserRouter([
       }
     ]
   },
-
-])
+]);
 
 function App() {
   return (
@@ -50,4 +46,3 @@ function App() {
 }
 
 export default App;
-

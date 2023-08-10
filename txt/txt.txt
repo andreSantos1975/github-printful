@@ -1,3 +1,9 @@
 
 YOUTUBE:
 Complete E-Commerce App with React, Strapi, Stripe | Shopping App Tutorial for Beginners (Lama dev)
+
+MEDIDAS PARA O RESPONSIVO NA FERRAMENTAS DE INSPERÇÃO DO NAVEGADOR
+iPhone X / iPhone XS / iPhone 11 Pro: 375 x 812 pixels
+iPhone 8 / iPhone 7 / iPhone 6: 375 x 667 pixels
+Google Pixel 2 / Pixel 2 XL: 411 x 731 pixels / 411 x 823 pixels
+Samsung Galaxy S9 / S8: 360 x 740 pixels / 360 x 740 pixels

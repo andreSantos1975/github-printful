@@ -71,52 +71,16 @@
         }
 
 
-        /* Regra de mídia para telas menores */
-        /* Estilos para telas menores */
-        @media (max-width: 768px) {
-            .wrapper {
-                padding: 10px;
-            }
+/* Regra de mídia para telas menores */
+@media (max-width: 768px) {
+ 
 
-            .center {
-                font-size: 20px;
-                /* Ajuste o tamanho da fonte para telas menores */
-            }
+  .item {
+   margin-right: -33px;
+ }
 
-            .left {
-                display: none;
-                /* Esconder os elementos left em telas menores */
-            }
-
-            .navbar .center {
-                order: 2;
-                /* Reorganizar o centro para ser o primeiro elemento na ordem */
-            }
-
-            .icons {
-                display: flex;
-                gap: 15px;
-                color: #777;
-                cursor: pointer;
-                order: 1;
-                /* Reorganizar os ícones para serem o segundo elemento na ordem */
-            }
-
-            .cartIcon {
-                position: relative;
-                margin-right: -25px;
-            }
-
-            .item {
-                display: flex;
-                align-items: center;
-                margin-right: -2px;
-                order: 3;
-                /* Reorganizar os links para serem o terceiro elemento na ordem */
-            }
-
-
-        }
+ 
+}
 
 
 
