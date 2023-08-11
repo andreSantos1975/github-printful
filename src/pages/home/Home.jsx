@@ -15,7 +15,6 @@ export const Home = () => {
       <FeaturedProducts type='nova' />
       <Categories />
       <FeaturedProducts type='Em destaque' />
-   
       <Contact />
     </div>
   )

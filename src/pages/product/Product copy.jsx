@@ -31,7 +31,7 @@ export const Product = () => {
       </div>
       <div className='right'>
         <h1>Title</h1>
-        <span className='price'>$299</span>
+        <span>$299</span>
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
           suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
