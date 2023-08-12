@@ -96,16 +96,37 @@
 
             .icons {
                 display: flex;
+                margin-right: 55px;
                 gap: 15px;
                 color: #777;
                 cursor: pointer;
+                 /* Reorganizar os ícones para serem o segundo elemento na ordem */
                 order: 1;
-                /* Reorganizar os ícones para serem o segundo elemento na ordem */
-            }
+                .cartIcon span {
+                    position: absolute;
+                    /* Posição absoluta em relação ao elemento pai (.cartIcon) */
+                    top: -5px;
+                    /* Posiciona o número 6 pixels acima do ícone do carrinho */
+                    left: 20px;
+                    /* Posiciona o número 6 pixels à direita do ícone do carrinho */
+                    padding: 3px 5px;
+                    /* Adicione algum espaço entre o número e o fundo do cartão */
+                    border-radius: 50%;
+                    /* Tornar o número circular */
+                    background-color: #43cbcb;
+                    /* Cor de fundo do número */
+                    font-size: 10px;
+                    /* Tamanho de fonte do número */
+                    color: #ffffff;
+                    /* Cor do número */
+                }
+
+                }
 
             .cartIcon {
                 position: relative;
-                margin-right: -25px;
+                margin-right: -50px;
+                
             }
 
             .item {
