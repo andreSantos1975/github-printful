@@ -13,7 +13,7 @@ export const Contact = () => {
             <span> INSCREVA-SE</span>
             <div className='mail'>
                 <input type="text" placeholder='Entre com e-mail...' />
-                <button>Entrar</button>
+                <button>Enviar</button>
             </div>
             <div className='icons'>
               <div className='icon'>

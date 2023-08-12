@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 export const Card = ({ item }) => {
   const [showSecondImage, setShowSecondImage] = useState(false);
 
+  //O Outro Título Do Card Esta Sendo Passado No Home
   return (
     <div className='card'>
       <div className='image'>
