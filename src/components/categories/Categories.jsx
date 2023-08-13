@@ -55,7 +55,7 @@ export const Categories = () => {
                 </div>
             </div>
             <div className='row'>
-            <img src={image6} alt="" />
+            <img src={image6} className='row' alt="" />
                 <button>
                     <Link className='link' to='/products/1' >Calças</Link>
                 </button>

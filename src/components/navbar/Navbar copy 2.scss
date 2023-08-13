@@ -39,8 +39,7 @@
             display: flex;
             align-items: center;
             gap: 25px;
-
-
+            margin-left: 34px;
         }
 
         .icons {
@@ -85,10 +84,19 @@
             }
 
             .center-custom {
-               display: none;
+                display: none;
             }
 
-      
+
+            .right {
+                .item-right {
+                    right: 56px;
+                }
+
+                .link-sobre {
+                    display: none;
+                }
+            }
 
             .navbar .center {
                 order: 2;
@@ -99,10 +107,16 @@
                 display: flex;
                 margin-right: 55px;
                 gap: 15px;
-                color: #777;
+                color: #fcf9f9;
                 cursor: pointer;
-                 /* Reorganizar os ícones para serem o segundo elemento na ordem */
+                /* Reorganizar os ícones para serem o segundo elemento na ordem */
                 order: 1;
+
+                @media (max-width: 768px) {
+                   margin-right: 455px;
+     
+                 }
+
                 .cartIcon span {
                     position: absolute;
                     /* Posição absoluta em relação ao elemento pai (.cartIcon) */
@@ -122,30 +136,28 @@
                     /* Cor do número */
                 }
 
-                }
+            }
 
             .cartIcon {
                 position: relative;
                 margin-right: -50px;
-                
-            }
 
+            }
+        .left {
             .item {
                 display: flex;
-                margin: 1px;
-               // align-items: center;
-                margin-left: 50px;
-               // margin-right: 200px;
+                align-items: center;
+                margin-right: 10px;
                 order: 3;
-
-                @media (max-width: 768px) {
-                
-               
-     
-                 }
-               
+                /* Reorganizar os links para serem o terceiro elemento na ordem */
             }
 
+            .icone-seta {
+                margin-left: -50px;
+            }
+
+        
+        }
 
         }
 

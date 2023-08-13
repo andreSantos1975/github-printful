@@ -26,30 +26,34 @@ export const Navbar = () => {
                         <span>Melzinha</span>
                         <KeyboardArrowDownIcon className='icone-seta' />
                     </div>
-                    <div className='item'>
-                        <Link className='link' to='/product/1'>Mulher</Link>
-                    </div>
-                    <div className='item'>
-                        <Link className='link' to='/product/2'>Homen</Link>
-                    </div>
-                    <div className='item'>
-                        <Link className='link' to='/product/3'>Criança</Link>
-                    </div>
+                    
+                        <div className='item'>
+                            <Link className='link' to='/product/1'>Mulher</Link>
+                        </div>
+                        <div className='item-'>
+                            <Link className='link' to='/product/2'>Homen</Link>
+                        </div>
+                        <div className='item'>
+                            <Link className='link' to='/product/3'>Criança</Link>
+                        </div>
+                    
                 </div>
                 <div className='center center-custom' style={{ marginBottom: '-5px' }}>
                     <Link className='link' to='/'>Melzinha</Link>
                 </div>
                 <div className='right'>
-                    <div className='item'>
+                   <div className='item-right'>
                         <Link className='link' to='/'>Homepage</Link>
                     </div>
                     <div className='item'>
-                        <Link className='link' to='/'>Blog</Link>
+                        <Link className='link' to='/'>Sobre</Link>
+                    </div>
+                    <div className='item'>
+                        <Link className='link' to='/'>Contatos</Link>
                     </div>
                     <div className='item'>
                         <Link className='link' to='/'>Loja</Link>
                     </div>
-                   
                     <div className='icons'>
                         <SearchIcon />
                         <PersonOutlineOutlinedIcon />

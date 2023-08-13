@@ -83,3 +83,75 @@ export const Product = () => {
           <img src={images[0]} alt="" onClick={() => handleThumbnailClick(0)} />
           <img src={images[1]} alt="" onClick={() => handleThumbnailClick(1)} />
         </div>
+
+===============================================================================================================
+-------------------------RESPONSIVO NAVBAR------------------------------------
+------------------------------------------------------------------------
+Sim, é possível substituir o slider por um banner específico para dispositivos móveis utilizando regras de mídia CSS em uma aplicação React. A ideia é aplicar estilos diferentes dependendo do tamanho da tela, permitindo que você exiba o banner no lugar do slider apenas em dispositivos móveis.
+
+Aqui está um exemplo de como você pode fazer isso:
+
+Importe o seu componente de banner ou crie um novo componente de banner específico para dispositivos móveis.
+jsx
+Copy code
+import React from 'react';
+
+const MobileBanner = () => {
+  return (
+    <div className="mobile-banner">
+      {/* Conteúdo do banner móvel */}
+    </div>
+  );
+};
+
+export default MobileBanner;
+Em sua página inicial (ou onde o slider está sendo exibido), importe tanto o componente do slider quanto o componente do banner para dispositivos móveis.
+jsx
+Copy code
+import React from 'react';
+import Slider from './Slider'; // Importe o componente do slider
+import MobileBanner from './MobileBanner'; // Importe o componente do banner móvel
+import './Home.css'; // Importe seu arquivo CSS para estilos
+
+const Home = () => {
+  return (
+    <div className="home">
+      <Slider /> {/* Exibe o slider no desktop */}
+      <MobileBanner /> {/* Exibe o banner móvel em dispositivos móveis */}
+    </div>
+  );
+};
+
+export default Home;
+Use regras de mídia CSS para ocultar ou exibir o slider e o banner conforme o tamanho da tela.
+css
+Copy code
+/* No seu arquivo de estilos (por exemplo, Home.css) */
+
+/* Estilos gerais para a página inicial */
+.home {
+  /* Seus estilos para a página inicial aqui */
+}
+
+/* Estilos para o slider em dispositivos desktop */
+.slider {
+  display: block; /* Exibe o slider por padrão */
+}
+
+/* Estilos para o banner móvel em dispositivos móveis */
+.mobile-banner {
+  display: none; /* Oculta o banner móvel por padrão */
+}
+
+/* Regra de mídia para dispositivos móveis */
+@media (max-width: 768px) {
+  .slider {
+    display: none; /* Oculta o slider em dispositivos móveis */
+  }
+
+  .mobile-banner {
+    display: block; /* Exibe o banner móvel em dispositivos móveis */
+    /* Estilos adicionais para o banner móvel */
+  }
+}
+Certifique-se de ajustar os tamanhos de tela e os estilos de acordo com as necessidades do seu design. Com essas regras de mídia, o slider será exibido no desktop e o banner móvel será exibido apenas em dispositivos móveis, proporcionando uma experiência de usuário otimizada para diferentes tamanhos de tela.

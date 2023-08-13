@@ -84,11 +84,10 @@
                 /* Ajuste o tamanho da fonte para telas menores */
             }
 
-            .center-custom {
-               display: none;
+            .left {
+                display: none;
+                /* Esconder os elementos left em telas menores */
             }
-
-      
 
             .navbar .center {
                 order: 2;
@@ -132,15 +131,15 @@
 
             .item {
                 display: flex;
-                margin: 1px;
-               // align-items: center;
-                margin-left: 50px;
+                margin: 4px;
+                align-items: center;
+                //margin-left: 2px;
                // margin-right: 200px;
                 order: 3;
 
                 @media (max-width: 768px) {
-                
-               
+                   margin: 1px;
+                   margin-left: 185px;
      
                  }
                

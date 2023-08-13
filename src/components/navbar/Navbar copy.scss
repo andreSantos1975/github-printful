@@ -40,6 +40,9 @@
             align-items: center;
             gap: 25px;
 
+            .item {
+                margin-left: 678px;
+            }
 
         }
 
@@ -54,7 +57,7 @@
             .cartIcon span {
                 position: absolute;
                 /* Posição absoluta em relação ao elemento pai (.cartIcon) */
-                top: 11px;
+                top: 15px;
                 /* Posiciona o número 6 pixels acima do ícone do carrinho */
                 right: -25px;
                 /* Posiciona o número 6 pixels à direita do ícone do carrinho */
@@ -75,8 +78,10 @@
         /* Regra de mídia para telas menores */
         /* Estilos para telas menores */
         @media (max-width: 768px) {
+            display: flex;
+
             .wrapper {
-                padding: 10px;
+                padding: 40px;
             }
 
             .center {
@@ -84,11 +89,15 @@
                 /* Ajuste o tamanho da fonte para telas menores */
             }
 
-            .center-custom {
-               display: none;
-            }
+            .left {
+                display: flex;
 
-      
+                .icone-seta {
+                    margin-left: -44px;
+                }
+
+
+            }
 
             .navbar .center {
                 order: 2;
@@ -97,12 +106,13 @@
 
             .icons {
                 display: flex;
-                margin-right: 55px;
+                margin-right: 155px;
                 gap: 15px;
                 color: #777;
                 cursor: pointer;
-                 /* Reorganizar os ícones para serem o segundo elemento na ordem */
+                /* Reorganizar os ícones para serem o segundo elemento na ordem */
                 order: 1;
+
                 .cartIcon span {
                     position: absolute;
                     /* Posição absoluta em relação ao elemento pai (.cartIcon) */
@@ -122,30 +132,49 @@
                     /* Cor do número */
                 }
 
-                }
+            }
 
             .cartIcon {
                 position: relative;
                 margin-right: -50px;
+
+            }
+
+            .right {
                 
+            
             }
 
             .item {
                 display: flex;
-                margin: 1px;
-               // align-items: center;
-                margin-left: 50px;
-               // margin-right: 200px;
+                align-items: center;
+                margin-right: -15px;
+                gap: 1;
                 order: 3;
-
-                @media (max-width: 768px) {
-                
-               
-     
-                 }
-               
+                /* Reorganizar os links para serem o terceiro elemento na ordem */
             }
 
+            .item-img {
+                display: none;
+            }
+
+          
+
+            .item-sobre {
+                display: none;
+            }
+
+            .item-contatos {
+                display: none;
+            }
+
+            .item-loja {
+                display: none;
+            }
+
+            .center-custom {
+                display: none;
+            }
 
         }
 

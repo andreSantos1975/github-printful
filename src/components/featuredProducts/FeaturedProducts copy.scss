@@ -1,6 +1,6 @@
 .featuredProducts {
     margin: 30px 100px;
-    margin-left: 16px;
+    margin-left: 6px;
 
     @media (max-width: 768px) {
         margin: 30px 10px;
@@ -13,39 +13,32 @@
             overflow: hidden;
             position: relative;
         }
+
+
     }
 
     .top {
         display: flex;
-        flex-direction: column; // Alterado para exibir os elementos em coluna
-        align-items: center; // Centralizar os elementos horizontalmente
-        text-align: center; // Centralizar o texto
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 100px;
+        margin-left: 4px;
 
         h1 {
+            flex: 1;
+            margin-left: 6px;
             text-transform: capitalize;
-            margin-top: 20px; // Adicione algum espaço superior para o h1
-            margin-left: -35px;
-
-            @media (max-width: 768px) {
-               margin-left: -205px;
-
-            }
         }
 
         p {
+            flex: 3;
             color: gray;
-            padding: 20px; // Reduza o preenchimento para dar mais espaço ao texto
         }
     }
 
     .botton {
         display: flex;
-        margin-left: 25px;
         justify-content: center;
         gap: 50px;
-
-        @media (max-width: 768px) {
-            margin-left: -185px;
-        }
     }
 }
