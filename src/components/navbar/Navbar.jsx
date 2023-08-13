@@ -18,13 +18,13 @@ export const Navbar = () => {
         <div className='navbar'>
             <div className='wrapper'>
                 <div className='left'>
-                    <div className='item-img'>
+                    <div className='item'>
                         <img src='../img/en.png' alt='' />
                         <KeyboardArrowDownIcon />
                     </div>
                     <div className='item'>
                         <span>Melzinha</span>
-                        <KeyboardArrowDownIcon className='icone-seta' />
+                        <KeyboardArrowDownIcon className='icone' />
                     </div>
                     <div className='item'>
                         <Link className='link' to='/product/1'>Mulher</Link>

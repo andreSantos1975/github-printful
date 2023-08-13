@@ -26,6 +26,7 @@
 
         .left {
             display: flex;
+            margin-left: 90px;
             align-items: center;
             gap: 25px;
         }
@@ -85,14 +86,21 @@
             }
 
             .center-custom {
-               display: none;
+                display: none;
             }
 
-      
+
 
             .navbar .center {
                 order: 2;
                 /* Reorganizar o centro para ser o primeiro elemento na ordem */
+            }
+
+            .left {
+                margin-left: 90px;
+               .item {
+                margin: 3px;
+               }
             }
 
             .icons {
@@ -101,8 +109,9 @@
                 gap: 15px;
                 color: #777;
                 cursor: pointer;
-                 /* Reorganizar os ícones para serem o segundo elemento na ordem */
+                /* Reorganizar os ícones para serem o segundo elemento na ordem */
                 order: 1;
+
                 .cartIcon span {
                     position: absolute;
                     /* Posição absoluta em relação ao elemento pai (.cartIcon) */
@@ -122,29 +131,26 @@
                     /* Cor do número */
                 }
 
-                }
+            }
 
             .cartIcon {
                 position: relative;
                 margin-right: -50px;
-                
+
             }
 
             .item {
                 display: flex;
                 margin: 1px;
-               // align-items: center;
-                margin-left: 50px;
-               // margin-right: 200px;
+                // align-items: center;
+                margin-left: 90px;
+                // margin-right: 200px;
                 order: 3;
 
-                @media (max-width: 768px) {
-                
-               
-     
-                 }
                
             }
+
+
 
 
         }
