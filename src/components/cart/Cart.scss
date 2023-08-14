@@ -14,6 +14,25 @@
     -webkit-box-shadow: 0px 0px 7px -5px rgba(0, 0, 0, 0.5);
     box-shadow: 0px 0px 7px -5px rgba(0, 0, 0, 0.5);
 
+    @media (max-width: 768px) {
+        position: absolute;
+        right: 20px;
+        margin-right: 200px;
+        top: 70px;
+        z-index: 999;
+        background-color: white;
+        padding: 15px;
+        max-width: 400px;
+        /* Defina o valor máximo de largura desejado */
+        max-height: 800px;
+        /* Aumente a altura máxima do cart */
+        overflow: auto;
+        /* Adicione scroll quando necessário */
+        -webkit-box-shadow: 0px 0px 7px -5px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 0px 7px -5px rgba(0, 0, 0, 0.5);
+
+     }
+
     .item {
         display: flex;
         align-items: center;
@@ -81,3 +100,4 @@
     }
 
 }
+

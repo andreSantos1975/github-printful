@@ -34,7 +34,12 @@
 
         p {
             color: gray;
-            padding: 20px; // Reduza o preenchimento para dar mais espaço ao texto
+            padding: 10px; // Reduza o preenchimento para dar mais espaço ao texto
+            margin: 0;
+            font-size: 18px;
+            font-weight: 300;
+            text-align: center;
+
         }
     }
 

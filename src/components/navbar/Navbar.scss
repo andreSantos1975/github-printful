@@ -98,7 +98,7 @@
 
             .left {
                 width: 100%;
-                margin-right: 45px;
+                margin-right: -25px;
                .item {
                 margin: 1px;
                }
@@ -114,8 +114,8 @@
 
             .icons {
                 display: flex;
-                margin-right: 55px;
-                gap: 15px;
+                margin-right: -25px;
+                gap: 1px;
                 color: #777;
                 cursor: pointer;
                 /* Reorganizar os ícones para serem o segundo elemento na ordem */

@@ -4,6 +4,8 @@
     .top {
         display: flex;
         gap: 50px;
+       //margin-right: 88px;
+        margin-left: -100px;
        
 
         .item {
@@ -14,6 +16,8 @@
             gap: 10px;
             text-align: justify;
             font-size: 14px;
+
+         
 
             .h1 {
                 font-size: 18px;
