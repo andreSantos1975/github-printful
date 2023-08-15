@@ -3,6 +3,7 @@ import './Product.scss';
 import image1 from './image/list3.jpg';
 import image2 from './image/list6.jpg';
 
+
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import BalanceIcon from "@mui/icons-material/Balance";
@@ -19,8 +20,9 @@ export const Product = () => {
 
 
   return (
+   
     <div className='product'>
-      <div className='left'>
+    <div className='left'>
         <div className="images">
           <img src={images[0]} alt="" onClick={e => setSelectedImage(0)} />
           <img src={images[1]} alt="" onClick={e => setSelectedImage(1)} />

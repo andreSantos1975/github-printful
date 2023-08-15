@@ -1,5 +1,6 @@
+
 .card {
-    width: 280px;
+    width: 390px;
     display: flex;
     margin-left: 6px;
     flex-direction: column;
@@ -58,6 +59,7 @@
 
     .price {
         display: flex;
+        margin-top: -25px;
         gap: 20px;
 
         h3 {
@@ -74,8 +76,9 @@
 
 @media (max-width: 768px) {
     .card {
+        flex-direction: column;
         width: 200px; // Defina a largura total para se ajustar ao dispositivo
-       margin-left: -20px;
+        margin-left: 20px;
 
         .image {
             height: 250px; // Reduza a altura da imagem para se ajustar ao dispositivo
@@ -88,18 +91,12 @@
               
             }
 
-            span {
-                // Mantenha as propriedades da tag span
-            }
+          
         }
 
-        h2 {
-            // Mantenha as propriedades do título
-        }
+       
 
-        .price {
-            // Mantenha as propriedades do preço
-        }
+      
     }
 }
 

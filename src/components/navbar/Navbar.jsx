@@ -41,7 +41,7 @@ export const Navbar = () => {
                 </div>
                 <div className='right'>
                     <div className='item'>
-                        <Link className='link' to='/'>Homepage</Link>
+                        <Link className='link' to='/'>Home</Link>
                     </div>
                     <div className='item'>
                         <Link className='link' to='/'>Blog</Link>

@@ -16,10 +16,18 @@
     }
 
     .top {
-        display: flex;
+        display: flex; 
+       // width: 1000px;
+        //margin-left: 55px;
         flex-direction: column; // Alterado para exibir os elementos em coluna
         align-items: center; // Centralizar os elementos horizontalmente
         text-align: center; // Centralizar o texto
+
+        @media (max-width: 768px) {
+            width: 1000px;
+            margin-left: 55px;
+
+         }
 
         h1 {
             text-transform: capitalize;
@@ -27,7 +35,7 @@
             margin-left: -35px;
 
             @media (max-width: 768px) {
-               margin-left: -205px;
+               margin-left: -80px;
 
             }
         }
@@ -39,6 +47,8 @@
             font-size: 18px;
             font-weight: 300;
             text-align: center;
+
+          
 
         }
     }
