@@ -1,29 +1,26 @@
 .contact {
   margin-bottom: -35px;
-  margin-left: -367px;
+  width: 100%;
   background-color: rgb(107, 201, 244);
   color: white;
   padding: 15px;
   display: flex;
   justify-content: center;
 
-  @media (max-width:768) {
-    //margin-left: -367px;
+  @media (max-width: 768px) {
+    margin-right: 200px;
+    width: 1300px;
   }
+
 }
 
 .wrapper {
   display: flex;
-  //ALTERAÇÃO NA MARGEM ESQUERDA DO WRAPPER CONTACT INFLUENCIA A POSIÇÃO DO NAVBAR
-  margin-left: -100px;
   align-items: center;
   justify-content: space-between;
 
   @media (max-width: 768) {
     display: flex;
-   // margin: 34px;
-    //ALTERAÇÃO NA MARGEM ESQUERDA DO WRAPPER CONTACT INFLUENCIA A POSIÇÃO DO NAVBAR
-   // margin-left: -1200px;
     align-items: center;
     justify-content: space-between;
   }
