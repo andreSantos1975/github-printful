@@ -1,4 +1,3 @@
-
 .card {
     width: 390px;
     display: flex;
@@ -82,21 +81,16 @@
 
         .image {
             height: 250px; // Reduza a altura da imagem para se ajustar ao dispositivo
-           // margin-left: 10;
+            // margin-left: 10;
 
             .mainImg,
             .secondImg {
                 width: 100%; // Ajuste a largura das imagens para ocupar toda a largura da imagem pai
                 margin-left: 0; // Reduza ou remova a margem esquerda para as imagens
-              
+
             }
 
-          
         }
 
-       
-
-      
     }
 }
-

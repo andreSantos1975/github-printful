@@ -6,8 +6,6 @@ import { Categories } from '../../components/categories/Categories';
 import { Contact } from '../../components/contact/Contact';
 
 
-
-
 export const Home = () => {
   return (
     <div className='home'>

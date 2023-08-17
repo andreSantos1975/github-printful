@@ -22,7 +22,7 @@ export const Navbar = () => {
                         <img src='../img/en.png' alt='' />
                         <KeyboardArrowDownIcon />
                     </div>
-                    <div className='item'>
+                    <div className='item-melzinha'>
                         <span>Melzinha</span>
                         <KeyboardArrowDownIcon className='icone' />
                     </div>

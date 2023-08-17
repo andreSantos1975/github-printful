@@ -90,7 +90,6 @@
             }
 
 
-
             .navbar .center {
                 order: 2;
                 /* Reorganizar o centro para ser o primeiro elemento na ordem */
@@ -98,19 +97,30 @@
 
             .left {
                 width: 100%;
-                margin-right: -25px;
-               .item {
-                margin: 1px;
-               }
-               .icone {
-                margin-left: -50px;
-              }
-          
+                margin-left: 90px;
+
+                .item {
+                    margin: 1px;
+                }
+
+                .item-melzinha {
+                    margin-right: -90px;
+                }
+
+                .icone {
+                    margin-right: 100px;
+                }
+
             }
 
-        
+            .right {
+                display: flex;
+                margin-right: 230px;
+                align-items: center;
+                gap: 25px;
 
-         
+
+            }
 
             .icons {
                 display: flex;
@@ -152,25 +162,12 @@
                 display: flex;
                 margin: 1px;
                 // align-items: center;
-                margin-left: 90px;
+                margin-left: 100px;
                 // margin-right: 200px;
                 order: 3;
 
-               
             }
-
-                 .link-blog {
-                    display: none;
-                 }
-
-                 .link-loja {
-                    display: none;
-                 }
-
-
         }
-
-
 
     }
 }

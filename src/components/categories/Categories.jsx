@@ -8,8 +8,6 @@ import image5 from '../categories/image/melzinha19.png';
 import image6 from '../categories/image/melzinha18.jpg';
 import { Link } from 'react-router-dom';
 
-
-
 export const Categories = () => {
   return (
     <div className='categories'>

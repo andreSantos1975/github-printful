@@ -6,7 +6,6 @@ import './Cart.scss';
 
 import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
 
-
 export const Cart = () => {
 
     const data = [
@@ -54,11 +53,10 @@ export const Cart = () => {
             ))}
             <div className="total">
                 <span>SUBTOTAL</span>
-                <span>R$ 123</span>
+                <span>R$ 1.239,89</span>
             </div>
             <button>PROCESSO DO CHECKOUT</button>
             <span className='reset'>Reset Cart</span>
         </div>
-
     )
 }

@@ -1,4 +1,3 @@
-
 .categories {
     display: flex;
     height: 80vh;
@@ -11,10 +10,12 @@
         flex-direction: column;
         gap: 10px;
 
-         /* Adicione regras de estilo para dispositivos móveis */
-         @media (max-width: 768px) {
-            flex: none; /* Remova a flexibilidade para que a coluna não ocupe toda a largura */
-            max-width: 30%; /* Defina a largura máxima para a largura da tela */
+        /* Adicione regras de estilo para dispositivos móveis */
+        @media (max-width: 768px) {
+            flex: none;
+            /* Remova a flexibilidade para que a coluna não ocupe toda a largura */
+            max-width: 30%;
+            /* Defina a largura máxima para a largura da tela */
         }
     }
 
@@ -28,8 +29,6 @@
         gap: 10px;
         position: relative;
         overflow: hidden;
-
-   
 
         button {
             position: absolute;
@@ -54,10 +53,11 @@
         height: 100%;
         object-fit: cover;
 
-          /* Adicione regras de estilo para dispositivos móveis */
-          @media (max-width: 768px) {
-            height: 100%; /* Reduza a altura da imagem para manter a proporção */
-          
+        /* Adicione regras de estilo para dispositivos móveis */
+        @media (max-width: 768px) {
+            height: 100%;
+            /* Reduza a altura da imagem para manter a proporção */
+
         }
     }
 }

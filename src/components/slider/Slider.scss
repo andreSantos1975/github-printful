@@ -6,7 +6,7 @@
 
     @media (max-width: 768px) {
         width: 1100px;
-     }
+    }
 
     .container {
         width: 300px;
@@ -14,18 +14,13 @@
         display: flex;
         transition: all 1s ease;
 
-    
-
         img {
-         
+
             width: 2200px;
             height: 100%;
             object-fit: cover;
-
-            
         }
 
-       
     }
 
     .icons {
@@ -49,8 +44,3 @@
         cursor: pointer;
     }
 }
-
-
-
-
-
