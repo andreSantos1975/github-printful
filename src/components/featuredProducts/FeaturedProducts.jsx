@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import './FeaturedProducts.scss';
 import image1 from '../featuredProducts/image/melzinha5.jpg';
 import image2 from '../featuredProducts/image/melzinha10.jpg';
@@ -48,6 +49,24 @@ export const FeaturedProducts = ({ type }) => {
       price: 250.00
     },
   ];
+
+  const [product, setProduct] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await axios.get(process.env.REACT_APP_API_URL + "/products", {
+          headers: {
+            Authorization: "Bearer" + process.env.REACT_APP_API_TOKEN,
+          },
+        })
+        console.log(data)
+      } catch (err) {
+        console.log(err)
+      }
+    }
+    fetchData();
+  },[]);
 
   return (
     <div className='featuredProducts'>
