@@ -18,10 +18,8 @@
 
     .top {
         display: flex;
-        //margin-right: 300px;
+      
         margin-left: 125px;
-        // width: 1000px;
-        //margin-left: 55px;
         flex-direction: column; // Alterado para exibir os elementos em coluna
         align-items: center; // Centralizar os elementos horizontalmente
         text-align: center; // Centralizar o texto
@@ -29,15 +27,11 @@
         @media (max-width: 768px) {
 
             display: flex;
-            // width: 1000px;
-            //margin-left: 55px;
             flex-direction: column; // Alterado para exibir os elementos em coluna
             align-items: center; // Centralizar os elementos horizontalmente
             text-align: center; // Centralizar o texto
-
-
             width: 500px;
-            margin-left: 130px;
+            margin-left: 100px;
 
         }
 

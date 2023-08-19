@@ -28,9 +28,7 @@ export const Contact = () => {
               <div className='icon'>
                 <GoogleIcon />
               </div>
-              <div className='icon'>
-                <PinterestIcon />
-              </div>
+           
             </div>
         </div>
     </div>

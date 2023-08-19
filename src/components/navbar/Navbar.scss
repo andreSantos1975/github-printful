@@ -46,7 +46,6 @@
             align-items: center;
             gap: 25px;
 
-
             .link-blog {
                 display: flex;
                 margin-top: 4px;
@@ -103,15 +102,11 @@
             }
         }
 
-       
-
-
         /* Regra de mídia para telas menores */
         /* Estilos para telas menores */
         @media (max-width: 768px) {
             .wrapper {
                 padding: 10px;
-
 
             }
 
@@ -132,7 +127,7 @@
 
             .left {
                 width: 100%;
-               // margin-right: 300px;
+                // margin-right: 300px;
                 margin-left: 1px;
                 margin: 1px;
 
@@ -174,7 +169,6 @@
                 .link-loja {
                     display: none;
                 }
-
 
             }
 
