@@ -24,7 +24,7 @@ export const Footer = () => {
         <div className='item'>
           <h1>Sobre</h1>
           <span>O próprio cliente é muito dinheiro, mas eu não sei
-            Da mesma forma, eles acontecem ao mesmo tempo que com trabalho de parto e dor. O cliente é muito inteligente.</span>
+            Da mesma forma.</span>
         </div>
         <div className='item'>
           <h1>Contatos</h1>
