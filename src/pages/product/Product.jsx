@@ -20,9 +20,9 @@ export const Product = () => {
 
 
   return (
-   
+
     <div className='product'>
-    <div className='left'>
+      <div className='left'>
         <div className="images">
           <img src={images[0]} alt="" onClick={e => setSelectedImage(0)} />
           <img src={images[1]} alt="" onClick={e => setSelectedImage(1)} />
@@ -61,14 +61,14 @@ export const Product = () => {
           <span>Produto tipo: T-Shist</span>
           <span>Tag: T-Shist homem top</span>
         </div>
-         <th />
-         <div className="details">
+        <th />
+        <div className="details">
           <span>DETALHES</span>
           <hr />
           <span>INFORMAÇÃO ADICIONAL</span>
           <hr />
           <span>FAQ</span>
-         </div>
+        </div>
       </div>
     </div>
   )

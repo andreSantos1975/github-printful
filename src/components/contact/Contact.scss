@@ -1,6 +1,7 @@
 .contact {
   margin-bottom: -35px;
   width: 100%;
+  margin-left: 10px;
   background-color: rgb(107, 201, 244);
   color: white;
   padding: 15px;
@@ -8,8 +9,8 @@
   justify-content: center;
 
   @media (max-width: 768px) {
-    margin-right: 200px;
-    width: 1300px;
+    margin-left: -100px;
+    width: 100%;
   }
 
 }
@@ -19,11 +20,7 @@
   align-items: center;
   justify-content: space-between;
 
-  @media (max-width: 768) {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+  
 
   input {
     padding: 10px;

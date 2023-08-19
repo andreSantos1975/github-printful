@@ -18,12 +18,12 @@ export const Navbar = () => {
         <div className='navbar'>
             <div className='wrapper'>
                 <div className='left'>
-                    <div className='item'>
+                    <div className='item-img'>
                         <img src='../img/en.png' alt='' />
                         <KeyboardArrowDownIcon />
                     </div>
                     <div className='item-melzinha'>
-                        <span>Melzinha</span>
+                        <span className='span-melzinha'>Melzinha</span>
                         <KeyboardArrowDownIcon className='icone' />
                     </div>
                     <div className='item'>
@@ -44,10 +44,10 @@ export const Navbar = () => {
                         <Link className='link' to='/'>Home</Link>
                     </div>
                     <div className='item'>
-                        <Link className='link' to='/'>Blog</Link>
+                        <Link className='link-blog' to='/'>Blog</Link>
                     </div>
                     <div className='item'>
-                        <Link className='link' to='/'>Loja</Link>
+                        <Link className='link-loja' to='/'>Loja</Link>
                     </div>
                    
                     <div className='icons'>

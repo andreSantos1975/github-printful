@@ -18,8 +18,8 @@ export const Footer = () => {
           <span>FAQ</span>
           <span>Páginas</span>
           <span>Lojas</span>
-          <span>Compare</span>
-          <span>Cokies</span>
+          <span>Blog</span>
+          <span>Sobre</span>
         </div>
         <div className='item'>
           <h1>Sobre</h1>

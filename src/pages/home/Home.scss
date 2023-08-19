@@ -1,3 +1,9 @@
+
 .home {
-   width: 1300px;
-}
+   width: 1270px;
+
+   @media (max-width: 768px) {
+      width: 900px;
+      margin-right: -500px;
+   }
+ }

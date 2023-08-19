@@ -4,6 +4,10 @@
     gap: 10px;
     margin: 10px;
 
+    @media (max-width: 768px) {
+        width: 790px;
+    }
+
     .col {
         flex: 1;
         display: flex;
@@ -26,7 +30,7 @@
     .row {
         flex: 1;
         display: flex;
-        gap: 10px;
+        gap: 13px;
         position: relative;
         overflow: hidden;
 
@@ -45,6 +49,16 @@
             background-color: white;
             text-transform: uppercase;
             font-weight: 500;
+
+        }
+
+        .button-category {
+            @media (max-width:768px) {
+                min-width: 80px;
+                width: fit-content;
+                height: 5px;
+                margin-left: -12px;
+            }
         }
     }
 
@@ -55,8 +69,9 @@
 
         /* Adicione regras de estilo para dispositivos móveis */
         @media (max-width: 768px) {
-            height: 100%;
-            /* Reduza a altura da imagem para manter a proporção */
+            .img-category {
+                padding: 106px;
+            }
 
         }
     }
