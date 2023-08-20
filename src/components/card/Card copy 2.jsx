@@ -7,10 +7,7 @@ export const Card = ({ item }) => {
 
   console.log('DATA CARD', item)
 
-  // Extrair as URLs das imagens do objeto item
-  const mainImageUrl = process.env.REACT_APP_UPLOAD_URL + item.attributes.img.data.attributes.url;
-  const secondImageUrl = item.attributes.img2 ? process.env.REACT_APP_UPLOAD_URL + item.attributes.img2.data.attributes.url : null;
-
+  //O Outro Título Do Card HomePage Esta Sendo Passado No Home
   return (
     <div className='card'>
       <div className='image'>
@@ -20,8 +17,8 @@ export const Card = ({ item }) => {
           onMouseEnter={() => setShowSecondImage(true)}
           onMouseLeave={() => setShowSecondImage(false)}
         >
-          <img src={mainImageUrl} alt="" className='mainImg' />
-          {secondImageUrl && showSecondImage && <img src={secondImageUrl} alt="" className='secondImg' />}
+           <img src={img} alt="" className='mainImg' />
+          {img2 && showSecondImage && <img src={img2} alt="" className='secondImg' />}
         </Link>
       </div>
       <h2>{item?.attributes.title}</h2>

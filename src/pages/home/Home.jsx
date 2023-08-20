@@ -10,9 +10,11 @@ export const Home = () => {
   return (
     <div className='home'>
       <Slider />
+      {/*Início do Título do Cart HomePage*/}
       <FeaturedProducts type='nova' />
       <Categories />
-      <FeaturedProducts type='Em destaque na' />
+       {/*Início do Título do Cart HomaPage*/}
+      <FeaturedProducts type='Produtos em' />
       <Contact />
     </div>
   )
