@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 export const Card = ({ item }) => {
   const [showSecondImage, setShowSecondImage] = useState(false);
 
-  console.log('DATA CARD', item)//.............................................log
+  //console.log('DATA CARD', item)//.............................................log
 
   // Extrair as URLs das imagens do objeto item
   const mainImageUrl = process.env.REACT_APP_UPLOAD_URL + item.attributes?.img?.data?.attributes?.url;

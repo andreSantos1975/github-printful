@@ -7,10 +7,7 @@ import useFetch from '../../hooks/useFetchs';
 export const FeaturedProducts = ({ type }) => {
   const { data, loading, error } = useFetch(`/products?populate=*`);
 
-  console.log("data FeaturedProducts", data); // Log dos produtos
-
-  // Filtrar os produtos em destaque
-  const featuredProducts = data?.filter(item => item.attributes.type === 'destaque');
+  console.log("data FeaturedProducts", data)//........................................................log
 
   return (
     <div className='featuredProducts'>
@@ -20,12 +17,13 @@ export const FeaturedProducts = ({ type }) => {
       </div>
       <div className='botton'>
         {error ? "something went wrong!" : (loading ? "loading..."
-          : featuredProducts.map(item => (
-              <div key={item.id}>
-                <Card item={item} />
-              </div>
-            ))
-        )}
+          : data?.map(item => {
+            console.log("Price:", item.attributes.price);
+            console.log("Type:", item.attributes.type);
+
+            return <Card item={item} key={item.id} />;
+          }))
+        }
       </div>
     </div>
   );

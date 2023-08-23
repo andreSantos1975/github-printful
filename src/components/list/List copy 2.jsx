@@ -6,9 +6,11 @@ import { Card } from '../card/Card';
 
 export const List = ({subCats, maxPrice, sort, catId}) => {
 
-  const {data, loading, error} = useFetch(
-    `/products?populate=*&[filters][categories][id]=${catId}`);
-    console.log("Listar subcategories", data)//...............................log
+  const { data, loading, error } = useFetch(
+    `/sub-categories?id_in=${subCats.join(',')}`
+  );
+    
+  console.log("Listar subcategories", data)//...........................................log
 
   return (
     <div className='list'>
