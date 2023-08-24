@@ -20,12 +20,11 @@ export const Products = () => {
     const value = e.target.value;
     const isChecked = e.target.checked;
 
-    setSelectedSubCats(prevSelectedSubCats =>
+    setSelectedSubCats(
       isChecked
-        ? [...prevSelectedSubCats, value]
-        : prevSelectedSubCats.filter(item => item !== value)
+        ? [...selectedSubCats, value]
+        : selectedSubCats.filter(item => item !== value)
     );
-    
   }
 
 

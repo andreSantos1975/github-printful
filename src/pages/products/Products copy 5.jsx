@@ -20,12 +20,11 @@ export const Products = () => {
     const value = e.target.value;
     const isChecked = e.target.checked;
 
-    setSelectedSubCats(prevSelectedSubCats =>
+    setSelectedSubCats(
       isChecked
-        ? [...prevSelectedSubCats, value]
-        : prevSelectedSubCats.filter(item => item !== value)
+        ? [...selectedSubCats, value]
+        : selectedSubCats.filter(item => item !== value)
     );
-    
   }
 
 
@@ -47,11 +46,7 @@ export const Products = () => {
           <h2>Filtrar por preço</h2>
           <div className="inputItem">
             <span>0</span>
-            <input 
-            type="range" 
-            min={0} 
-            max={1000} 
-            onChange={(e) => setMaxPrice(e.target.value)} />
+            <input type="range" min={0} max={1000} onClick={(e) => setMaxPrice(e.target.value)} />
             <span>{maxPrice}</span>
           </div>
         </div>
