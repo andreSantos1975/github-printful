@@ -2,6 +2,7 @@ import React from 'react';
 import './Home.scss';
 import { Slider } from '../../components/slider/Slider';
 import { FeaturedProducts } from '../../components/featuredProducts/FeaturedProducts';
+import { FeaturedProductsLancament } from '../../components/featuredProducts/FeaturedProductsLancament';
 import { Categories } from '../../components/categories/Categories';
 import { Contact } from '../../components/contact/Contact';
 
@@ -14,7 +15,7 @@ export const Home = () => {
       <FeaturedProducts type='nova' />
       <Categories />
        {/*Início do Título do Cart HomaPage*/}
-      <FeaturedProducts type='Destaque na' />
+      <FeaturedProductsLancament type='Destaque na' />
       <Contact />
     </div>
   )

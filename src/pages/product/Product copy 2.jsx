@@ -24,20 +24,12 @@ export const Product = () => {
     <div className='product'>
       {loading ? "loading..." : (<><div className='left'>
         <div className="images">
-          <img
-            src={process.env.REACT_APP_UPLOAD_URL + data?.attributes?.img?.data?.attributes?.url}
-            alt=""
-            onClick={() => setSelectedImage("img")}
-          />
-          <img
-            src={process.env.REACT_APP_UPLOAD_URL + data?.attributes?.img2?.data?.attributes?.url}
-            alt=""
-            onClick={() => setSelectedImage("img2")}
-          />
+          <img src={process.env.REACT_APP_UPLOAD_URL + data?.attributes?.img?.data?.attributes?.url} alt="" onClick={e => setSelectedImage(data?.attributes?.img?.data?.attributes?.url)} />
+          <img src={process.env.REACT_APP_UPLOAD_URL + data?.attributes?.img2?.data?.attributes?.url} alt="" onClick={e => setSelectedImage(data?.attributes?.img2?.data?.attributes?.url)} />
+
         </div>
         <div className="manImg">
-        <img src={process.env.REACT_APP_UPLOAD_URL + data?.attributes[selectedImage].data?.attributes?.url} alt="" />
-
+          <img src={data?.attributes[selectedImage].data?.attributes?.url} alt="" />
         </div>
       </div>
         <div className='right'>

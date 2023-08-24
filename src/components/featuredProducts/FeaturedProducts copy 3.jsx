@@ -9,9 +9,7 @@ export const FeaturedProducts = ({ type }) => {
 
 
 
-  const { data, loading, error } = useFetch(
-    `/products?populate=*`
-  );
+  const { data, loading, error } = useFetch(`/products?populate=*`);
 
 
   console.log("data FeaturedProducts", data)//........................................................log

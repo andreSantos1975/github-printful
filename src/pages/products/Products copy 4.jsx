@@ -12,9 +12,8 @@ export const Products = () => {
   const [sort, setSort] = useState(null);
   const [selectedSubCats, setSelectedSubCats] = useState([]);
 
-  const {data, loading, error} = useFetch(`/sub-categories?[filters][destaque][id][$eq]=${catId}`);
-  console.log("data products categoria", data)//..................................................................log
-  console.log("data products categoria catId", catId)//..................................................................log
+  const { data, loading, error } = useFetch(`/sub-categories?[filters][destaque][id][$eq]=${catId}`);
+  console.log("data products", data)//..................................................................log
 
   const handleChange = (e) => {
     const value = e.target.value;

@@ -12,24 +12,22 @@ export const Products = () => {
   const [sort, setSort] = useState(null);
   const [selectedSubCats, setSelectedSubCats] = useState([]);
 
-  const {data, loading, error} = useFetch(`/sub-categories?[filters][destaque][id][$eq]=${catId}`);
-  console.log("data products categoria", data)//..................................................................log
-  console.log("data products categoria catId", catId)//..................................................................log
+  const { data, loading, error } = useFetch(`/sub-categories?[filters][destaque][id][$eq]=${catId}`);
+  console.log("data products", data)//..................................................................log
 
   const handleChange = (e) => {
     const value = e.target.value;
     const isChecked = e.target.checked;
 
-    setSelectedSubCats(
+    setSelectedSubCats(prevSubCats =>
       isChecked
-        ? [...selectedSubCats, value]
-        : selectedSubCats.filter(item => item !== value)
+        ? [...prevSubCats, value]
+        : prevSubCats.filter(item => item !== value)
     );
   }
 
 
-  console.log("SELECTED-SUB-CATEGORIA", selectedSubCats);//......................................log
-  
+  console.log("SELECTED-SUB-CATEGORIA", selectedSubCats)
   return (
     <div className='products'>
       <div className='left'>
