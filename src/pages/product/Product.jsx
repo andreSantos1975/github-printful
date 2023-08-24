@@ -41,13 +41,9 @@ export const Product = () => {
         </div>
       </div>
         <div className='right'>
-          <h1>Title</h1>
-          <span className='price'>$299</span>
-          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
-            suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
-            lacus vel facilisis labore et dolore magna aliqua. Quis ipsum
-            suspendisse ultrices gravida. Risus commodo viverra maecenas.</p>
+          <h1>{data?.attributes?.title}</h1>
+          <span className='price'>{data?.attributes?.price}</span>
+          <p>{data?.attributes?.desc}</p>
 
           <div className="quantity">
             <button onClick={() => setQuantity((prev) => (prev === 1 ? 1 : prev - 1))}>-</button>

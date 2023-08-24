@@ -6,14 +6,15 @@ import { Card } from '../card/Card';
 
 export const List = ({subCats, maxPrice, sort, catId}) => {
 
-  
+  // Verifique se sort é nulo ou indefinido, e defina como uma string vazia se for
+  const sortParam = sort ? `&sort=price:${sort}` : '';
 
   const {data, loading, error} = useFetch( `/products?populate=*&[filters][destaque][id]=${catId}${subCats.map(
     item =>`&[filters][sub_categories][id][$eq]=${item}`
-    )}}&[filters][price][$lte]=${maxPrice}`
-    );
+  )}}&[filters][price][$lte]=${maxPrice}${sortParam}`
+  );
     
-    console.log("Listar subcategories", data)//.......................................log
+  //console.log("Listar subcategories", data)//....Obtém os dados do banco de dados Strapi.................log
 
   return (
     <div className='list'>
@@ -23,6 +24,5 @@ export const List = ({subCats, maxPrice, sort, catId}) => {
     </div>
   )
 }
-
 
 export default List;
