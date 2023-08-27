@@ -2,6 +2,8 @@
 YOUTUBE:
 Complete E-Commerce App with React, Strapi, Stripe | Shopping App Tutorial for Beginners (Lama dev)
 
+YOUTUBE: Deploy Node.js and React Apps to Heroku and Netlify | MERN Deployment (Lama dev)
+
 MEDIDAS PARA O RESPONSIVO NA FERRAMENTAS DE INSPERÇÃO DO NAVEGADOR
 iPhone X / iPhone XS / iPhone 11 Pro: 375 x 812 pixels
 iPhone 8 / iPhone 7 / iPhone 6: 375 x 667 pixels
