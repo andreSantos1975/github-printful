@@ -30,13 +30,13 @@ export const Navbar = () => {
                         <KeyboardArrowDownIcon className='icone' />
                     </div>
                     <div className='item'>
-                        <Link className='link' to='/product/1'>Mulher</Link>
+                        <Link className='link' to='/product/12'>Mulher</Link>
                     </div>
                     <div className='item'>
-                        <Link className='link' to='/product/2'>Homen</Link>
+                        <Link className='link' to='/product/11'>Homen</Link>
                     </div>
                     <div className='item'>
-                        <Link className='link' to='/product/3'>Criança</Link>
+                        <Link className='link' to='/product/12'>Criança</Link>
                     </div>
                 </div>
                 <div className='center center-custom' style={{ marginBottom: '-5px' }}>

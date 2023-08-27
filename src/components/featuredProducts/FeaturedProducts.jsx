@@ -8,9 +8,9 @@ export const FeaturedProducts = ({ type }) => {
 
 const { data, loading, error } = useFetch(`/products?populate=*`);
 
-console.log("data FeaturedProducts", data)//........................................................log
+//console.log("data FeaturedProducts", data)//........................................................log
 
-  // Filtrar os produtos em destaque
+  /// Filtrar os produtos em destaque
   const featuredProducts = data?.filter(item => item.attributes.type === 'destaque');
 
 return (

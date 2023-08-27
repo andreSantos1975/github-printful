@@ -6,36 +6,35 @@ import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { removeItem, resetCart } from '../../redux/cartReducer';
 import { makeRequest } from "../../makeRequest";
-import {loadStripe} from '@stripe/stripe-js';
+import { loadStripe } from '@stripe/stripe-js';
 
 export const Cart = () => {
 
-   const products = useSelector(state=>state.cart.products);
-   const dispatch = useDispatch()
+    const products = useSelector(state => state.cart.products);
+    const dispatch = useDispatch();
 
-   const totalPrice = () => {
-    let total = 0;
-    products.forEach((item)=> (total+=item.quantity*item.price));
-    return total.toFixed(2);
-   }
-
-   const stripePromise = loadStripe("pk_test_51Nj4sZFpke7arqdJzn50rFsbRvS79wtFVYHDsuxWpPsFYt1KKsuLFtuW6zlTa75EJ6DGfxO9j5d4k3HdxOZLDtL300vYArxVHp");
-
-
-   const handlePayment = async () => {
-    try{
-        const stripe = await stripePromise
-
-        const res = await makeRequest.post("/orders", {
-            products,
-        })
-        await stripe.redirectToCheckout({
-            sessionId: res.data.stripeSession.id,
-          });
-    }catch(err){
-        console.log(err)
+    const totalPrice = () => {
+        let total = 0;
+        products.forEach((item) => (total += item.quantity * item.price));
+        return total.toFixed(2);
     }
-   }
+
+    const stripePromise = loadStripe("pk_test_51Nj4sZFpke7arqdJzn50rFsbRvS79wtFVYHDsuxWpPsFYt1KKsuLFtuW6zlTa75EJ6DGfxO9j5d4k3HdxOZLDtL300vYArxVHp");
+
+    const handlePayment = async () => {
+        try {
+            const stripe = await stripePromise
+
+            const res = await makeRequest.post("/orders", {
+                products,
+            })
+            await stripe.redirectToCheckout({
+                sessionId: res.data.stripeSession.id,
+            });
+        } catch (err) {
+            console.log(err)
+        }
+    }
 
     return (
         <div className='cart'>
@@ -48,7 +47,7 @@ export const Cart = () => {
                         <p>{item.desc?.substring(0, 100)}</p>
                         <div className="price">{item.quantity} xR$ {item.price}</div>
                     </div>
-                    <DeleteOutlinedIcon className='delete' onClick={() =>dispatch(removeItem(item.id))} />
+                    <DeleteOutlinedIcon className='delete' onClick={() => dispatch(removeItem(item.id))} />
                 </div>
             ))}
             <div className="total">
@@ -56,7 +55,7 @@ export const Cart = () => {
                 <span>{totalPrice()}</span>
             </div>
             <button onClick={handlePayment} >PROCESSO DO CHECKOUT</button>
-            <span className='reset' onClick={() =>dispatch(resetCart())}>Reset Cart</span>
+            <span className='reset' onClick={() => dispatch(resetCart())}>Reset Cart</span>
         </div>
     )
 }

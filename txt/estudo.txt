@@ -55,103 +55,77 @@ Lembrando que a implementação específica da lógica de mudança de linguagem 
 projeto. Portanto, é importante adaptar a lógica acima para se adequar ao seu caso de uso específico.
 
 ===================================================================================================================
-------------------------------------------------------------------10/08/2023---------------------------------------
--------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------26/08/2023---------------------------------------
+-------------------ESVAZIAR O CARRINHO APÓS O CHECKOUT--------------------------------------------------------------
+
+Entendi a situação. Parece que você deseja realizar uma ação no frontend (mais especificamente, a chamada dispatch(resetCart()); 
+para esvaziar o carrinho) a partir do backend (no arquivo order controller) após a confirmação do checkout.
+
+No entanto, essa abordagem não é direta, pois o backend e o frontend são partes diferentes do seu aplicativo e geralmente não se 
+comunicam diretamente dessa maneira.
+
+A forma mais comum de realizar essa ação é fazer com que o frontend, após a confirmação bem-sucedida do checkout, realize uma nova 
+chamada à sua API para notificar o backend que o pagamento foi processado com sucesso. Nessa chamada, você poderia executar a ação 
+resetCart() no frontend e também, opcionalmente, poderia ter um endpoint específico no backend para esvaziar o carrinho.
+
+Siga esses passos aproximados:
+
+Frontend (após sucesso de checkout):
+javascript
 Copy code
-import React, { useState } from 'react';
-import './Product.scss';
-import image1 from './image/list3.jpg';
-import image2 from './image/list6.jpg';
-
-export const Product = () => {
-
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-
-  const images = [
-    image1,
-    image2
-  ];
-
-  const handleThumbnailClick = (index) => {
-    setSelectedImageIndex(index);
-  };
-
-  return (
-    <div className='product'>
-      <div className='left'>
-        <div className="image">
-          <img src={images[0]} alt="" onClick={() => handleThumbnailClick(0)} />
-          <img src={images[1]} alt="" onClick={() => handleThumbnailClick(1)} />
-        </div>
-
-===============================================================================================================
--------------------------RESPONSIVO NAVBAR------------------------------------
-------------------------------------------------------------------------
-Sim, é possível substituir o slider por um banner específico para dispositivos móveis utilizando regras de mídia CSS em uma aplicação React. A ideia é aplicar estilos diferentes dependendo do tamanho da tela, permitindo que você exiba o banner no lugar do slider apenas em dispositivos móveis.
-
-Aqui está um exemplo de como você pode fazer isso:
-
-Importe o seu componente de banner ou crie um novo componente de banner específico para dispositivos móveis.
-jsx
-Copy code
-import React from 'react';
-
-const MobileBanner = () => {
-  return (
-    <div className="mobile-banner">
-      {/* Conteúdo do banner móvel */}
-    </div>
-  );
+// Após o redirecionamento bem-sucedido do Stripe
+// Realize uma chamada à sua API para notificar o backend
+const clearCart = async () => {
+    try {
+        // Realize uma chamada à API para esvaziar o carrinho
+        await makeRequest.post("/clear-cart");
+        
+        // Execute a ação para resetar o carrinho localmente
+        dispatch(resetCart());
+    } catch (error) {
+        console.log(error);
+    }
 };
 
-export default MobileBanner;
-Em sua página inicial (ou onde o slider está sendo exibido), importe tanto o componente do slider quanto o componente do banner para dispositivos móveis.
-jsx
-Copy code
-import React from 'react';
-import Slider from './Slider'; // Importe o componente do slider
-import MobileBanner from './MobileBanner'; // Importe o componente do banner móvel
-import './Home.css'; // Importe seu arquivo CSS para estilos
+// ... mais código ...
 
-const Home = () => {
-  return (
-    <div className="home">
-      <Slider /> {/* Exibe o slider no desktop */}
-      <MobileBanner /> {/* Exibe o banner móvel em dispositivos móveis */}
-    </div>
-  );
+const handlePayment = async () => {
+    try {
+        const stripe = await stripePromise;
+
+        const res = await makeRequest.post("/orders", {
+            products,
+        });
+
+        await stripe.redirectToCheckout({
+            sessionId: res.data.stripeSession.id,
+        });
+
+        // Chame a função para esvaziar o carrinho após o checkout
+        clearCart();
+    } catch (err) {
+        console.log(err);
+    }
 };
-
-export default Home;
-Use regras de mídia CSS para ocultar ou exibir o slider e o banner conforme o tamanho da tela.
-css
+Backend (adicionar um novo endpoint):
+javascript
 Copy code
-/* No seu arquivo de estilos (por exemplo, Home.css) */
+// Adicione um novo endpoint à sua API que será chamado pelo frontend
+module.exports = createCoreController("api::order.order", ({ strapi }) => ({
+    // ... o código existente ...
 
-/* Estilos gerais para a página inicial */
-.home {
-  /* Seus estilos para a página inicial aqui */
-}
+    async clearCart(ctx) {
+        try {
+            // Coloque o código para esvaziar o carrinho aqui
+            // Por exemplo, você pode usar o mesmo serviço utilizado em resetCart no frontend
 
-/* Estilos para o slider em dispositivos desktop */
-.slider {
-  display: block; /* Exibe o slider por padrão */
-}
-
-/* Estilos para o banner móvel em dispositivos móveis */
-.mobile-banner {
-  display: none; /* Oculta o banner móvel por padrão */
-}
-
-/* Regra de mídia para dispositivos móveis */
-@media (max-width: 768px) {
-  .slider {
-    display: none; /* Oculta o slider em dispositivos móveis */
-  }
-
-  .mobile-banner {
-    display: block; /* Exibe o banner móvel em dispositivos móveis */
-    /* Estilos adicionais para o banner móvel */
-  }
-}
-Certifique-se de ajustar os tamanhos de tela e os estilos de acordo com as necessidades do seu design. Com essas regras de mídia, o slider será exibido no desktop e o banner móvel será exibido apenas em dispositivos móveis, proporcionando uma experiência de usuário otimizada para diferentes tamanhos de tela.
+            return { message: "Cart cleared successfully" };
+        } catch (error) {
+            ctx.response.status = 500;
+            return { error };
+        }
+    },
+}));
+Certifique-se de que sua chamada à API esteja correta e que você esteja tratando as respostas e os erros apropriadamente. 
+Lembre-se de que as operações de frontend e backend ocorrem de forma independente e é importante garantir que ações relevantes 
+sejam comunicadas entre eles de maneira adequada.
