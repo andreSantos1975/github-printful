@@ -68,3 +68,60 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+How to deploy apps for free
+Deploying single react applications and full-stack web applications using Heroku and Netlify.
+
+SINGLE REACT APP ON HEROKU
+
+1-Crie uma conta Heroku.
+2-Crie seu aplicativo.
+3-Baixe o Heroku CLI aqui.
+4-Execute esses códigos.
+heroku login
+git init
+heroku git:remote -a <app-name>
+heroku create -b https://github.com/mars/create-react-app-buildpack.git
+git add .
+git commit -am "my first commit"
+git push heroku master
+Single React App on Netlify
+Deploy using the browser
+1-Construa seu aplicativo
+yarn build
+2-Arraste e solte sua pasta de construção na seção de upload manual do Netlify.
+
+DEPLOY USING GITHUB
+
+Connect to the Github
+Choose your repository/branch
+Change the deployment code to
+CI= npm run build
+
+DEPLOYING FULL-STACK APPS
+
+1-Crie um aplicativo Heroku.
+2-Altere a porta do seu aplicativo Node para
+process.env.PORT || <any port number>
+3-Mova seu aplicativo front-end para dentro do aplicativo Node.
+4-Adicione esses códigos dentro do seu arquivo JS principal no seu aplicativo Node.
+app.use(express.static(path.join(__dirname, "/<front end app folder name>/build")));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '/<front end app folder name>/build', 'index.html'));
+});
+5-Adicione este script ao seu package.json no aplicativo Node.
+"heroku-postbuild": "cd client && npm install && npm run build"
+6-Altere o URL da API em seu aplicativo React.
+
+7-Defina suas variáveis de ambiente no Heroku
+
+8-Execute esses códigos.
+
+heroku login
+git init
+heroku git:remote -a <app-name>
+git add .
+git commit -am "my first commit"
+git push heroku master
