@@ -1,18 +1,18 @@
 import React from 'react';
 import './FeaturedProducts.scss';
-//import PrintfulTest from '../../printfulTest';
+import PrintfulTest from '../../printfulTest';
 
 import { Card } from '../card/Card';
 import useFetch from '../../hooks/useFetchs';
 
-export const FeaturedProducts = ({ type, printfulData }) => {
+export const FeaturedProducts = ({ type }) => {
 
 const { data, loading, error } = useFetch(`/products?populate=*`);
 
  /// Filtrar os produtos em destaque
- const featuredProducts = printfulData?.result || [];
+  const featuredProducts = data?.filter(item => item.attributes.type === 'destaque');
 
-  console.log("data FeaturedProducts", featuredProducts)//........................................................log
+
 
 return (
     <div className='featuredProducts'>

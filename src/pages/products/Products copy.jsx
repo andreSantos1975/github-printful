@@ -5,22 +5,16 @@ import List from '../../components/list/List';
 import { useParams } from 'react-router-dom';
 import useFetch from '../../hooks/useFetchs';
 
-export const Products = ({ printfulData }) => {
+export const Products = () => {
 
   const catId = parseInt(useParams().id);
   const [maxPrice, setMaxPrice] = useState(1000);
   const [sort, setSort] = useState(null);
   const [selectedSubCats, setSelectedSubCats] = useState([]);
 
-
-
- 
-
-
-   /// Filtrar os produtos em destaque
- const featuredProducts = printfulData?.result || [];
-
- console.log("data Products", featuredProducts)//........................................................log
+  const {data, loading, error} = useFetch(`/sub-categories?[filters][destaque][id][$eq]=${catId}`);
+  console.log("data products categoria", data)//..................................................................log
+  console.log("data products categoria catId", catId)//..................................................................log
 
   const handleChange = (e) => {
     const value = e.target.value;
@@ -42,10 +36,10 @@ export const Products = ({ printfulData }) => {
       <div className='left'>
         <div className='filterItem'>
           <h2>Produdos por Categoria</h2>
-          { featuredProducts?.map((item) => (
+          {data?.map((item) => (
             <div className="inputItem" key={item.id}>
               <input type='checkbox' id={item.id} value={item.id} onChange={handleChange} />
-              <label htmlFor={item.id}>{item.title}</label>
+              <label htmlFor={item.id}>{item.attributes.title}</label>
             </div>
           ))}
         </div>

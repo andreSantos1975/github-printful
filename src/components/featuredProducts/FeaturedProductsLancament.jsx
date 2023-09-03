@@ -4,14 +4,15 @@ import './FeaturedProducts.scss';
 import { Card } from '../card/Card';
 import useFetch from '../../hooks/useFetchs';
 
-export const FeaturedProductsLancament = ({ type }) => {
+export const FeaturedProductsLancament = ({ type,  printfulData }) => {
 
 const { data, loading, error } = useFetch(`/products?populate=*`);
 
-console.log("data FeaturedProducts", data)//........................................................log
 
   // Filtrar os produtos em destaque
-  const featuredProducts = data?.filter(item => item.attributes.type === 'lançamento');
+  const featuredProducts = printfulData?.result || [];
+
+  console.log("data FeaturedProductsLancament", featuredProducts)//........................................................log
 
 return (
     <div className='featuredProducts'>

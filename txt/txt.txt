@@ -9,3 +9,31 @@ iPhone X / iPhone XS / iPhone 11 Pro: 375 x 812 pixels
 iPhone 8 / iPhone 7 / iPhone 6: 375 x 667 pixels
 Google Pixel 2 / Pixel 2 XL: 411 x 731 pixels / 411 x 823 pixels
 Samsung Galaxy S9 / S8: 360 x 740 pixels / 360 x 740 pixels
+
+===========================================================================================================================
+
+O custo de desenvolvimento de um site de comércio eletrônico (e-commerce) no Brasil pode variar amplamente com base em diversos 
+fatores, incluindo o tamanho do projeto, a complexidade do site, as funcionalidades desejadas, o número de produtos que você planeja 
+vender, o design personalizado, os recursos de segurança, as integrações com sistemas de pagamento e logística, entre outros. 
+Além disso, os custos podem variar dependendo da agência de desenvolvimento ou do profissional contratado.
+
+Dito isso, aqui estão algumas estimativas gerais de custo para diferentes tipos de projetos de e-commerce no Brasil:
+
+Pequeno E-commerce Simples: Um site de e-commerce simples, com um design básico, poucos produtos (até 50) e integração com sistemas 
+de pagamento padrão, pode custar a partir de R$ 5.000 a R$ 15.000.
+
+E-commerce de Médio Porte: Um projeto de e-commerce de médio porte, com um design mais elaborado, recursos avançados, integração 
+com sistemas de pagamento, gateways de envio, sistemas de gerenciamento de conteúdo (CMS) e um catálogo maior (100 a 500 produtos), 
+pode custar entre R$ 15.000 a R$ 50.000.
+
+E-commerce de Grande Porte: Para um grande e-commerce com um design personalizado, recursos avançados, integrações complexas, 
+catálogo extenso (mais de 500 produtos) e requisitos específicos, os custos podem variar de R$ 50.000 a R$ 200.000 ou mais.
+
+Manutenção e Marketing: Lembre-se de que os custos não se limitam apenas ao desenvolvimento. Você também precisará orçar para 
+hospedagem, manutenção contínua, atualizações de segurança e marketing digital, como publicidade online e otimização de mecanismos 
+de busca (SEO).
+
+É importante discutir suas necessidades específicas com desenvolvedores de e-commerce ou agências de desenvolvimento, 
+pois eles poderão fornecer orçamentos mais precisos com base nos requisitos do seu projeto. Além disso, considere o custo a 
+longo prazo, incluindo despesas operacionais, para garantir que você esteja preparado para manter e promover seu e-commerce 
+após o lançamento.

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Home.scss';
 import { Slider } from '../../components/slider/Slider';
 import { FeaturedProducts } from '../../components/featuredProducts/FeaturedProducts';
@@ -8,10 +8,12 @@ import { Contact } from '../../components/contact/Contact';
 import { useDispatch } from 'react-redux';
 import { useLocation } from 'react-router-dom'; // Importa useLocation
 import { resetCart } from '../../redux/cartReducer'; // Importa resetCart
+import PrintfulTest from '../../printfulTest';
 
 export const Home = () => {
   const location = useLocation();
   const dispatch = useDispatch();
+  const [printfulData, setPrintfulData] = useState(null); // Estado para armazenar os dados do servidor Printful
 
   useEffect(() => {
     console.log('LOCATION SEARCH', location.search);
@@ -20,12 +22,17 @@ export const Home = () => {
     }
   }, [location.search, dispatch]);
 
+    // Adicione o console.log para verificar se printfulData está definido
+    console.log('printfulData no Home:', printfulData);//----------------PRINTFUL DATA NO HOME -------- log
+
+
   return (
     <div className='home'>
       <Slider />
-      <FeaturedProducts type='nova' />
+      <PrintfulTest setPrintfulData={setPrintfulData} /> {/* Passa a função setPrintfulData como prop */}
+      <FeaturedProducts type='nova' printfulData={printfulData} />
       <Categories />
-      <FeaturedProductsLancament type='Destaque na' />
+      <FeaturedProductsLancament type='Destaque na'  printfulData={printfulData} />
       <Contact />
     </div>
   );
