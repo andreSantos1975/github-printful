@@ -3,7 +3,7 @@ import './Products.scss';
 import image7 from './image/dog7.jpg';
 import List from '../../components/list/List';
 import { useParams } from 'react-router-dom';
-import useFetch from '../../hooks/useFetchs';
+
 
 export const Products = ({ printfulData }) => {
 
@@ -14,10 +14,7 @@ export const Products = ({ printfulData }) => {
 
 
 
- 
-
-
-   /// Filtrar os produtos em destaque
+ /// Filtrar os produtos em destaque
  const featuredProducts = printfulData?.result || [];
 
  console.log("data Products", featuredProducts)//........................................................log

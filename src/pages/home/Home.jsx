@@ -16,14 +16,14 @@ export const Home = () => {
   const [printfulData, setPrintfulData] = useState(null); // Estado para armazenar os dados do servidor Printful
 
   useEffect(() => {
-    console.log('LOCATION SEARCH', location.search);
+   // console.log('LOCATION SEARCH', location.search);//------------------LOCATION SEARCH-----------log
     if (location.search.includes('success=true')) {
       dispatch(resetCart()); // Utiliza a action resetCart
     }
   }, [location.search, dispatch]);
 
     // Adicione o console.log para verificar se printfulData está definido
-    console.log('printfulData no Home:', printfulData);//----------------PRINTFUL DATA NO HOME -------- log
+    //console.log('printfulData no Home:', printfulData);//----------------PRINTFUL DATA NO HOME -------- log
 
 
   return (

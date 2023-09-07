@@ -9,7 +9,7 @@ const PrintfulTest = ({ setPrintfulData }) => {
     axios.get('http://localhost:3001/printful/stores')
       .then((response) => {
         // Os dados de resposta estarão em response.data
-        console.log('response.data no PrintfulTest', response.data);//---RESPONSE DATA----------------log
+       /// console.log('response.data no PrintfulTest', response.data);//---RESPONSE DATA----------------log
 
         setData(response.data);
         setPrintfulData(response.data); // Define os dados no estado do componente Home
@@ -20,10 +20,7 @@ const PrintfulTest = ({ setPrintfulData }) => {
   }, [setPrintfulData]);
 
   return (
-    <div>
-      <h2>Resposta do servidor Printful:</h2>
-      <pre>{JSON.stringify(data, null, 2)}</pre>
-    </div>
+    <></>
   );
 };
 
