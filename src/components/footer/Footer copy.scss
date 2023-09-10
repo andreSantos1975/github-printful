@@ -1,10 +1,9 @@
 .footer {
     margin: 50px 100px 10px 100px;
-    margin-right: -53px;
 
     .top {
         display: flex;
-        margin-left: -44px;
+        //
         /* Colocando os itens em coluna em dispositivos móveis */
         gap: 20px;
         /* Reduzindo o espaçamento entre os itens */
@@ -71,7 +70,6 @@
         .right {
             img {
                 height: 50px;
-                margin-right: 63px;
             }
         }
     }

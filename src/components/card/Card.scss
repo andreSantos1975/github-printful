@@ -1,5 +1,5 @@
 .card {
-    width: 390px;
+    width: 90px;
     display: flex;
     margin-left: 6px;
     gap: 5px;
@@ -8,6 +8,7 @@
     .product {
         display: flex;
         flex-direction: column; /* Altere para exibir o nome e o preço abaixo da imagem */
+        margin-bottom: 1px; /* Ajuste o valor conforme necessário para controlar o espaço entre os produtos */
     }
 
     .image {
@@ -17,8 +18,8 @@
         position: relative;
 
         .mainImg {
-            width: 390px;
-            height: 350PX;
+            width: 290px;
+            height: 320PX;
             object-fit: cover;
         }
 
@@ -38,7 +39,7 @@
     h2 {
         font-size: 16px;
         font-weight: 400;
-        margin-top: -18px; /* Adicione um espaço entre a imagem e o nome */
+        margin-top: -28px; /* Adicione um espaço entre a imagem e o nome */
     }
 
     .price {
@@ -49,7 +50,7 @@
         h3 {
             font-size: 18px;
             font-weight: 500;
-            margin-top: -38px;
+            margin-top: -58px;
 
             &:first-child {
                 color: gray;
