@@ -2,23 +2,19 @@
     width: 390px;
     display: flex;
     margin-left: 6px;
+    flex-direction: column;
     gap: 5px;
     margin-bottom: 5px;
 
-    .product {
-        display: flex;
-        flex-direction: column; /* Altere para exibir o nome e o preço abaixo da imagem */
-    }
-
     .image {
-        width: 100%; /* Dividir o espaço ao meio para exibir duas imagens lado a lado */
-        height: 100%;
+        width: 100%;
+        height: 400px;
         overflow: hidden;
         position: relative;
 
         .mainImg {
-            width: 390px;
-            height: 350PX;
+            width: 100%;
+            height: 100%;
             object-fit: cover;
         }
 
@@ -38,22 +34,20 @@
     h2 {
         font-size: 16px;
         font-weight: 400;
-        margin-top: -18px; /* Adicione um espaço entre a imagem e o nome */
     }
 
     .price {
         display: flex;
+        margin-top: -25px;
         gap: 20px;
-        align-items: center; /* Alinhe o preço verticalmente com o nome */
 
         h3 {
             font-size: 18px;
             font-weight: 500;
-            margin-top: -38px;
 
             &:first-child {
                 color: gray;
-                // text-decoration: line-through;
+               // text-decoration: line-through;
             }
         }
     }
@@ -66,8 +60,8 @@
         margin-left: 20px;
 
         .image {
-            width: 100%; // Usar largura total para uma única coluna no dispositivo
             height: 250px; // Reduza a altura da imagem para se ajustar ao dispositivo
+            // margin-left: 10;
 
             .mainImg {
                 width: 100%; // Ajuste a largura da imagem principal para ocupar toda a largura da imagem pai

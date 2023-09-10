@@ -8,7 +8,7 @@ import { Contact } from '../../components/contact/Contact';
 import { useDispatch } from 'react-redux';
 import { useLocation } from 'react-router-dom'; // Importa useLocation
 import { resetCart } from '../../redux/cartReducer'; // Importa resetCart
-import ListProducts from '../../listProducts';
+import PrintfulTest from '../../printfulTest';
 
 export const Home = () => {
   const location = useLocation();
@@ -16,20 +16,20 @@ export const Home = () => {
   const [printfulData, setPrintfulData] = useState(null); // Estado para armazenar os dados do servidor Printful
 
   useEffect(() => {
-   // console.log('LOCATION SEARCH HOME', location.search home);//------------------LOCATION SEARCH-----------log
+   // console.log('LOCATION SEARCH', location.search);//------------------LOCATION SEARCH-----------log
     if (location.search.includes('success=true')) {
       dispatch(resetCart()); // Utiliza a action resetCart
     }
   }, [location.search, dispatch]);
 
-    //Console.log para verificar se printfulData está definido
-   // console.log('printfulData no Home:', printfulData);//----------------PRINTFUL DATA NO HOME -------- log
+    // Adicione o console.log para verificar se printfulData está definido
+    //console.log('printfulData no Home:', printfulData);//----------------PRINTFUL DATA NO HOME -------- log
 
 
   return (
     <div className='home'>
       <Slider />
-      <ListProducts setPrintfulData={setPrintfulData} /> {/* Passa a função setPrintfulData como prop */}
+      <PrintfulTest setPrintfulData={setPrintfulData} /> {/* Passa a função setPrintfulData como prop */}
       <FeaturedProducts type='nova' printfulData={printfulData} />
       <Categories />
       <FeaturedProductsLancament type='Destaque na'  printfulData={printfulData} />
