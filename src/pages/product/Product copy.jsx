@@ -15,11 +15,11 @@ export const Product = () => {
     const fetchData = async () => {
       try {
         // Chame a função getPrintfulData para buscar os dados do produto, passando o "id"
-       /// const response = await getPrintfulData(id);
-        ///console.log('response.data no Product', response);//-----------------------------------------------------------------log
+        const response = await getPrintfulData(id);
+        console.log('response.data no Product', response);//-----------------------------------------------------------------log
         
         // Defina os dados do produto no estado
-      /// setProductData(response);
+        setProductData(response);
 
         setLoading(false);
       } catch (error) {
