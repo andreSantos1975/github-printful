@@ -62,6 +62,7 @@ export const Product = () => {
                 <div key={index}>
                   <h1>{item.syncProduct.name}</h1>
                   <img src={item.syncProduct.thumbnail_url} alt="" className='mainImg' />
+                 
                 </div>
               ))}
             </div>
