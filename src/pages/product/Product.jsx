@@ -71,8 +71,8 @@ export const Product = () => {
             {productData.map((item, index) => (
               <div key={index}>
                 <h5>{item.syncProduct.name}</h5>
-                <h3>${item.syncVariants[0].product && item.syncVariants[0].retail_price}</h3>
-                <h4>{item.syncVariants[0].product && item.syncVariants[0].product.name}</h4>
+                <span classeName='price'>${item.syncVariants[0].product && item.syncVariants[0].retail_price}</span>
+                <p>{item.syncVariants[0].product && item.syncVariants[0].product.name}</p>
                 <div className="quantity">
                   <button onClick={() => setQuantity((prev) => (prev === 1 ? 1 : prev - 1))}>-</button>
                   {quantity}
@@ -83,7 +83,7 @@ export const Product = () => {
                   onClick={() =>
                     dispatch(
                       addToCart({
-                        // Se você precisar passar dados específicos do objeto sync_product para addToCart, faça aqui
+                       id: item.syncProduct.name,
                       })
                     )
                   }
