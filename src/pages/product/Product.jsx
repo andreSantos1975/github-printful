@@ -71,7 +71,7 @@ export const Product = () => {
             {productData.map((item, index) => (
               <div key={index}>
                 <h5>{item.syncProduct.name}</h5>
-                <span classeName='price'>${item.syncVariants[0].product && item.syncVariants[0].retail_price}</span>
+                <span className='price'>${item.syncVariants[0].product && item.syncVariants[0].retail_price}</span>
                 <p>{item.syncVariants[0].product && item.syncVariants[0].product.name}</p>
                 <div className="quantity">
                   <button onClick={() => setQuantity((prev) => (prev === 1 ? 1 : prev - 1))}>-</button>
@@ -83,7 +83,7 @@ export const Product = () => {
                   onClick={() =>
                     dispatch(
                       addToCart({
-                       id: item.syncProduct.name,
+                       
                       })
                     )
                   }
