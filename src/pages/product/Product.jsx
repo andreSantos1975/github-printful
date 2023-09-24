@@ -5,6 +5,8 @@ import { useDispatch } from 'react-redux';
 import { addToCart } from '../../redux/cartReducer';
 import getPrintfulData from '../../printfulApi';
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import BalanceIcon from "@mui/icons-material/Balance";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
 export const Product = () => {
   const id = useParams().id;
@@ -51,7 +53,7 @@ export const Product = () => {
         <>
           <div className='left'>
             <div className="images">
-            
+
               {/* Adicione mais imagens conforme necessário */}
             </div>
             <div className="manImg">
@@ -59,7 +61,7 @@ export const Product = () => {
               {productData.map((item, index) => (
                 <div key={index}>
                   <h1>{item.syncProduct.name}</h1>
-                  {/* Renderize outras informações do produto */}
+                  <img src={item.syncProduct.thumbnail_url} alt="" className='mainImg' />
                 </div>
               ))}
             </div>
@@ -85,7 +87,14 @@ export const Product = () => {
                 >
                   <AddShoppingCartIcon /> ADD TO CART
                 </button>
-                {/* Resto do seu código */}
+                <div className="link">
+                  <div className="item">
+                    <FavoriteBorderIcon />  ADD TO WIST LIST
+                  </div>
+                  <div className="item">
+                    <BalanceIcon />  ADD TO COMPARY
+                  </div>
+                </div>
               </div>
             ))}
           </div>
