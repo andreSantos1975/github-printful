@@ -70,9 +70,9 @@ export const Product = () => {
             {/* Renderize as informações do produto com base no array productData */}
             {productData.map((item, index) => (
               <div key={index}>
-                <h5>{item.syncProduct.name}</h5>
-                <h3>${item.syncVariants[0].product && item.syncVariants[0].retail_price}</h3>
-                <h4>{item.syncVariants[0].product && item.syncVariants[0].product.name}</h4>
+                {/*<h3>{item.syncProduct.name}</h3>*/}
+                <h2>{item.syncVariants.product && item.syncVariants.product.name}</h2>
+
                 <div className="quantity">
                   <button onClick={() => setQuantity((prev) => (prev === 1 ? 1 : prev - 1))}>-</button>
                   {quantity}
