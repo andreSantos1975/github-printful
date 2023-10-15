@@ -1,11 +1,10 @@
 import React from 'react';
+import axios from 'axios';
 import './Cart.scss';
 import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
-
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { removeItem, resetCart } from '../../redux/cartReducer';
-import { makeRequest } from "../../makeRequest";
 import { loadStripe } from '@stripe/stripe-js';
 
 export const Cart = () => {
@@ -25,7 +24,7 @@ export const Cart = () => {
         try {
             const stripe = await stripePromise
 
-            const res = await makeRequest.post("/orders", {
+            const res = await axios.post("/orders", {
                 products,
             })
             await stripe.redirectToCheckout({

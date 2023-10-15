@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './FeaturedProducts.scss';
 import { Card } from '../card/Card';
-import useFetch from '../../hooks/useFetchs';
+
 
 export const FeaturedProducts = ({ type, printfulData }) => {
-  const { data, loading, error } = useFetch(`/products?populate=*`);
+
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   console.log('printfulData FeaturedProducts', printfulData);//--------printfulData FeaturedProducts-------log
 
@@ -13,7 +15,7 @@ export const FeaturedProducts = ({ type, printfulData }) => {
     const featuredProducts = printfulData.map(item => item.result);
 
     console.log('FeaturedProducts featuredProducts', featuredProducts); // Log dos produtos em destaque
-    console.log(featuredProducts);//--------printfulData FeaturedProducts-------log
+    console.log(featuredProducts);//--------printfulData FeaturedProducts-----------------------------------log
 
     return (
       <div className='featuredProducts'>

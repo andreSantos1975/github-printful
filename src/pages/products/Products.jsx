@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './Products.scss';
 import image7 from './image/dog7.jpg';
-import List from '../../components/list/List';
 import { useParams } from 'react-router-dom';
 
 
@@ -17,7 +16,7 @@ export const Products = ({ printfulData }) => {
  /// Filtrar os produtos em destaque
  const featuredProducts = printfulData?.result || [];
 
- console.log("data Products", featuredProducts)//........................................................log
+ console.log("printfulData Products", featuredProducts)//........................................................log
 
   const handleChange = (e) => {
     const value = e.target.value;
@@ -72,7 +71,7 @@ export const Products = ({ printfulData }) => {
       </div>
       <div className='right'>
         <img className='catImg' src={image7} alt="" />
-        <List catId={catId} maxPrice={maxPrice} sort={sort} subCats={selectedSubCats} />
+        {/*<List catId={catId} maxPrice={maxPrice} sort={sort} subCats={selectedSubCats} />*/}
       </div>
     </div>
   )

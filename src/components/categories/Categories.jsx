@@ -21,7 +21,7 @@ export const Categories = () => {
                 <div className='row'>
                     <img src={image2} alt="" />
                     <button>
-                        <Link className='link' to='/products/1' >Mochilas</Link>
+                        <Link className='link' to='/products/2' >Mochilas</Link>
                     </button>
                 </div>
             </div>
@@ -29,7 +29,7 @@ export const Categories = () => {
                 <div className='row'>
                     <img src={image3} alt="" />
                     <button>
-                        <Link className='link' to='/products/1' >Camisetas</Link>
+                        <Link className='link' to='/products/3' >Camisetas</Link>
                     </button>
                 </div>
             </div>
@@ -39,7 +39,7 @@ export const Categories = () => {
                         <div className='row'>
                             <img className='img-category' src={image4} alt="" />
                             <button className='button-category'>
-                                <Link className='link' to='/products/1' >Acessórios</Link>
+                                <Link className='link' to='/products/4' >Acessórios</Link>
                             </button>
                         </div>
                     </div>
@@ -47,7 +47,7 @@ export const Categories = () => {
                         <div className='row'>
                             <img className='img-category' src={image5} alt="" />
                             <button className='button-category'>
-                                <Link className='link' to='/products/1' >Lançamentos</Link>
+                                <Link className='link' to='/products/5' >Lançamentos</Link>
                             </button>
                         </div>
                     </div>
@@ -55,7 +55,7 @@ export const Categories = () => {
                         <div className='row'>
                             <img className='img-category' src={image5} alt="" />
                             <button className='button-category'>
-                                <Link className='link' to='/products/1' >Decoração</Link>
+                                <Link className='link' to='/products/6' >Decoração</Link>
                             </button>
                         </div>
                     </div>

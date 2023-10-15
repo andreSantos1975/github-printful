@@ -18,7 +18,7 @@ export const Product = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Chame a função getPrintfulData para buscar os dados do produto, passando o "id"
+        // Chame a função getPrintfulData do arquivo printfulApi.js para buscar os dados do produto, passando o "id"
         const response = await getPrintfulData(id);
         console.log('response.data no Product', response); // Log do objeto completo
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const ListProducts = ({ setPrintfulData }) => {
+const ListProduct = ({ setPrintfulData }) => {
 
   const [data, setData] = useState(null);
   const productIds = ["319954391", "319853612", "320139725", "320161362"]; // Defina productIds no escopo do componente
@@ -27,5 +27,5 @@ const ListProducts = ({ setPrintfulData }) => {
   );
 };
 
-export default ListProducts;
+export default ListProduct;
 

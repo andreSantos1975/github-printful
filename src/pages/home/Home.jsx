@@ -1,19 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import './Home.scss';
-import { Slider } from '../../components/slider/Slider';
+//import { Slider } from '../../components/slider/Slider';
 import { FeaturedProducts } from '../../components/featuredProducts/FeaturedProducts';
-import { FeaturedProductsLancament } from '../../components/featuredProducts/FeaturedProductsLancament';
 import { Categories } from '../../components/categories/Categories';
 import { Contact } from '../../components/contact/Contact';
 import { useDispatch } from 'react-redux';
 import { useLocation } from 'react-router-dom'; // Importa useLocation
 import { resetCart } from '../../redux/cartReducer'; // Importa resetCart
-import ListProducts from '../../listProducts';
+import ListProduct from '../../listProduct';
+
 
 export const Home = () => {
   const location = useLocation();
   const dispatch = useDispatch();
   const [printfulData, setPrintfulData] = useState(null); // Estado para armazenar os dados do servidor Printful
+  const [dataLancament, setDataLancament] = useState(null); // Estado para armazenar os dados do servidor Printful
 
   useEffect(() => {
    // console.log('LOCATION SEARCH HOME', location.search home);//------------------LOCATION SEARCH-----------log
@@ -28,13 +29,13 @@ export const Home = () => {
 
   return (
     <div className='home'>
-      <Slider />
-      <ListProducts setPrintfulData={setPrintfulData} /> {/* Passa a função setPrintfulData como prop */}
+      {/*<Slider />*/}
+      <ListProduct setPrintfulData={setPrintfulData} /> {/* Passa a função setPrintfulData como prop */}
+      {/*<ListProductLancament setDataLancament={setDataLancament} />*/} {/* Passa a função setPrintfulData como prop */}
       <FeaturedProducts type='nova' printfulData={printfulData} />
       <Categories />
-      <FeaturedProductsLancament type='Destaque na'  printfulData={printfulData} />
+      {/*<FeaturedProductsLancament dataLancament={dataLancament}/>*/}
       <Contact />
     </div>
   );
 };
-
