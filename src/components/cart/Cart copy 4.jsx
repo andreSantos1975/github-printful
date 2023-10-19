@@ -20,19 +20,51 @@ export const Cart = () => {
 
     const stripePromise = loadStripe("pk_test_51Nj4sZFpke7arqdJzn50rFsbRvS79wtFVYHDsuxWpPsFYt1KKsuLFtuW6zlTa75EJ6DGfxO9j5d4k3HdxOZLDtL300vYArxVHp");
 
+   
+
     const handlePayment = async () => {
         try {
-            const res = await axios.post("http://localhost:3001/checkout", {
-                products,
-                success_url: process.env.CLIENT_URL + "?success=true",
-                cancel_url: process.env.CLIENT_URL + "?success=false",
+               // Realiza a solicitação de pagamento usando Stripe ou outro provedor
+        const stripe = await stripePromise;
+
+        // Obtenha as informações do cartão do usuário de um formulário seguro
+        const cardInfo = {
+            number: '4242424242424242', // Número do cartão de teste do Stripe
+            exp_month: 12, // Mês de expiração (entre 1 e 12)
+            exp_year: 2023, // Ano de expiração (quatro dígitos)
+            cvc: '123', // Código de verificação do cartão
+        };
+            const { error, paymentMethod } = await stripe.createPaymentMethod({
+                type: 'card',
+                card: cardInfo,
             });
     
-            window.location.href = res.data.checkoutUrl; // Redirecionar para a página de checkout do Stripe
+            if (error) {
+                console.error(error);
+                return;
+            }
+    
+            // Se a transação com o provedor de pagamento for bem-sucedida,
+            // agora você pode criar um pedido na Printful
+            const printfulOrder = {
+                products: products.map(item => ({
+                    title: item.title,
+                    price: item.price,
+                    quantity: item.quantity,
+                    printful_variant_id: item.variant_id, // Adicione o ID da variante da Printful
+                })),
+            };
+    
+            // Realiza a solicitação para criar um novo pedido na Printful
+            const printfulRes = await axios.post("http://localhost:3001/checkout", printfulOrder);
+    
+            // Redireciona para a URL de checkout do Stripe
+            window.location.href = printfulRes.data.checkoutUrl;
         } catch (err) {
             console.error(err);
         }
-    }
+    };
+    
     
 
     return (
