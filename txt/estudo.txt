@@ -132,3 +132,9 @@ export const Cart = () => {
 Lembre-se de que este é um exemplo simplificado e você pode precisar ajustar o código de acordo com a estrutura do seu aplicativo 
 e a implementação específica do Stripe Elements. Certifique-se de consultar a documentação do Stripe Elements para obter detalhes 
 mais específicos.
+
+=====================================================================================  9:42 19/10/2023
+
+Certifique-se de ajustar o seu endpoint /checkout no servidor para retornar o sessionId. Isso pode envolver modificação do backend 
+para incluir essa informação na resposta. Certifique-se de que o objeto retornado tem uma propriedade chamada sessionId. Se for 
+necessário, faça ajustes no servidor para que ele retorne a resposta desejada no formato esperado no frontend.
