@@ -74,15 +74,25 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 20px;
+        gap: 10px; /* Reduzi o espaço entre o ícone e o texto */
         cursor: pointer;
         border: none;
         background-color: #2879fe;
         color: white;
         font-weight: 500;
         margin-bottom: 20px;
+        border-radius: 5px; /* Adicione um raio para bordas arredondadas */
+        transition: background-color 0.2s; /* Adicione uma transição suave de cor de fundo */
+    
+        &:hover {
+            background-color: #1f65d6; /* Mude a cor de fundo no hover */
+        }
     }
 
+    .form-group {
+        margin-bottom: 10px; /* Adiciona espaço entre os campos */
+      }
+      
     .reset {
         color: red;
         font-size: 12px;

@@ -188,3 +188,62 @@ API do Printful para criar o pedido correspondente.
 Com essa lógica, o pedido na Printful será criado após um pagamento bem-sucedido no Stripe, e o usuário será redirecionado para a 
 página de sucesso no seu cliente. Certifique-se de que a URL de retorno de sucesso no Stripe seja configurada para sua rota /success 
 no servidor.
+
+
+
+
+=============================================================================================================================
+
+
+01/11/2023------------------------15:46 ---------------formulário do cart para o server.js
+
+
+
+Para enviar os campos "address" e "city" do formulário modal do componente Cart para o servidor backend (server.js), você 
+precisa fazer uma solicitação HTTP POST para o servidor. Você já está fazendo isso no seu código usando a biblioteca Axios para 
+fazer a solicitação para o endpoint /checkout. Agora, você precisa incluir os valores dos campos "address" e "city" no corpo da 
+solicitação POST.
+
+Aqui está como você pode modificar o seu código no componente Cart para incluir esses valores na solicitação:
+
+Crie estados para armazenar os valores dos campos "address" e "city":
+jsx
+Copy code
+const [address, setAddress] = useState("");
+const [city, setCity] = useState("");
+Atualize os campos de input no formulário para vinculá-los aos estados criados:
+jsx
+Copy code
+<div className="form-group">
+    <label>Address:</label>
+    <input type="text" value={address} onChange={(e) => setAddress(e.target.value)} />
+</div>
+<div className="form-group">
+    <label>City:</label>
+    <input type="text" value={city} onChange={(e) => setCity(e.target.value)} />
+</div>
+No manipulador handlePayment, adicione os valores de "address" e "city" ao corpo da solicitação POST:
+jsx
+Copy code
+const handlePayment = async () => {
+    try {
+        const res = await axios.post("http://localhost:3001/checkout", {
+            products,
+            recipient: {
+                address,
+                city,
+            },
+            success_url: process.env.CLIENT_URL + "?success=true",
+            cancel_url: process.env.CLIENT_URL + "?success=false",
+        });
+
+        window.location.href = res.data.checkoutUrl; // Redirecionar para a página de checkout do Stripe
+    } catch (err) {
+        console.error(err);
+    }
+}
+Certifique-se de que os valores de "address" e "city" estejam sendo definidos corretamente no servidor backend (server.js) 
+para processar a solicitação. Você pode acessá-los no servidor como req.body.recipient.address e req.body.recipient.city.
+Dessa forma, os valores de "address" e "city" serão incluídos na solicitação para o servidor backend e poderão ser processados 
+lá. Certifique-se de que os nomes dos campos no frontend e no backend estejam consistentes para que os dados sejam transmitidos 
+corretamente.
