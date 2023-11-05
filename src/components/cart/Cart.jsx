@@ -13,7 +13,7 @@ export const Cart = () => {
 
     const [recipient, setRecipient] = useState({
         name: "",
-        address: "",
+        address1: "",
         city: "",
         state_code: "",
         country_code: "",
@@ -35,7 +35,7 @@ export const Cart = () => {
                 products,
                 recipient: {
                     name: recipient.name,
-                    address: recipient.address,
+                    address1: recipient.address1,
                     city: recipient.city,
                     state_code: recipient.state_code,
                     country_code: recipient.country_code,
@@ -98,7 +98,7 @@ export const Cart = () => {
                         </div>
                         <div className="form-group">
                             <label>Endereço:</label>
-                            <input type="text" name="address" value={recipient.address} onChange={handleRecipientChange} />
+                            <input type="text" name="address1" value={recipient.address1} onChange={handleRecipientChange} />
                         </div>
                         <div className="form-group">
                             <label>Cidade:</label>
