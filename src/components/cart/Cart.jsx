@@ -11,6 +11,9 @@ export const Cart = () => {
     const products = useSelector(state => state.cart.products);
     const dispatch = useDispatch();
 
+    console.log('product no Card', products);//------------------------------------------log
+
+
     const [recipient, setRecipient] = useState({
         name: "",
         address1: "",
@@ -30,6 +33,7 @@ export const Cart = () => {
     const stripePromise = loadStripe("pk_test_51Nj4sZFpke7arqdJzn50rFsbRvS79wtFVYHDsuxWpPsFYt1KKsuLFtuW6zlTa75EJ6DGfxO9j5d4k3HdxOZLDtL300vYArxVHp");
 
     const handlePayment = async () => {
+        console.log('Produtos a serem enviados do Cart:', products); // Adicione este console.-----------------log
         try {
             const res = await axios.post("http://localhost:3001/checkout", {
                 products,
@@ -39,8 +43,9 @@ export const Cart = () => {
                     city: recipient.city,
                     state_code: recipient.state_code,
                     country_code: recipient.country_code,
-                    zip: recipient.zip
+                    zip: recipient.zip,
                 },
+                // productIds: recipient.id, // Adicione o ID do produto aqui
                 success_url: process.env.CLIENT_URL + "?success=true",
                 cancel_url: process.env.CLIENT_URL + "?success=false",
             });
@@ -117,10 +122,6 @@ export const Cart = () => {
                             <input type="text" name="zip" value={recipient.zip} onChange={handleRecipientChange} />
                         </div>
                     </form>
-
-
-
-
                 </div>
 
             )}
@@ -129,3 +130,4 @@ export const Cart = () => {
         </div>
     )
 }
+

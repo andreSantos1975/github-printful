@@ -20,7 +20,7 @@ export const Product = () => {
       try {
         // Chame a função getPrintfulData do arquivo printfulApi.js para buscar os dados do produto, passando o "id"
         const response = await getPrintfulData(id);
-        console.log('response.data no Product', response); // Log do objeto completo
+        console.log('data no Product', response); // --------------------------------------------------------log 
 
         // Verifique se response é um array e tem pelo menos um item
         if (Array.isArray(response) && response.length > 0) {

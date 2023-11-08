@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-//Responsável por mandar o id do produto para ser exibido no componente Product
+//Responsável por mandar o id do produto para ser exibido no componente Product e posteriomente para Cart
 
 const getPrintfulData = async (id) => {
   try {
@@ -9,7 +9,7 @@ const getPrintfulData = async (id) => {
 
     // Obter os dados do produto a partir da resposta do servidor intermediário
     const productData = response.data;
-    console.log('productData getPrintfulData:', productData); // ----------------------------------------------log
+    //console.log('productData getPrintfulData:', productData); // ----------------------------------------------log
 
     return productData; // Retorna os dados do produto e suas variantes
   } catch (error) {
