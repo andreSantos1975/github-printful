@@ -4,6 +4,7 @@ import { Products } from './pages/products/Products';
 import { Product } from './pages/product/Product';
 import { Navbar } from './components/navbar/Navbar';
 import { Footer } from './components/footer/Footer';
+import { AllProducts } from './components/allProducts/AllProducts';
 import './app.scss';
 
 const Layout = () => {
@@ -33,7 +34,10 @@ const router = createBrowserRouter([
         path: '/product/:id',
         element: <Product />
       },
-    
+      {
+        path: '/loja',
+        element: <AllProducts />
+      }
     ]
   },
 ]);

@@ -23,16 +23,24 @@ export const Navbar = () => {
                 <div className='left'>
                     <div className='item-img'>
                         <img src='../img/en.png' alt='' />
-                       
+                        <KeyboardArrowDownIcon />
                     </div>
                     <div className='item-melzinha'>
-                        <span className='span-melzinha'>PetPrints</span>
-                        
+                        <span className='span-melzinha'>Melzinha</span>
+                        <KeyboardArrowDownIcon className='icone' />
                     </div>
-                
+                    <div className='item'>
+                        <Link className='link' to='/product/12'>Mulher</Link>
+                    </div>
+                    <div className='item'>
+                        <Link className='link' to='/product/11'>Homen</Link>
+                    </div>
+                    <div className='item'>
+                        <Link className='link' to='/product/12'>Criança</Link>
+                    </div>
                 </div>
                 <div className='center center-custom' style={{ marginBottom: '-5px' }}>
-                    <Link className='link' to='/'>PetPrints</Link>
+                    <Link className='link' to='/'>Melzinha</Link>
                 </div>
                 <div className='right'>
                     <div className='item'>
@@ -42,7 +50,7 @@ export const Navbar = () => {
                         <Link className='link-blog' to='/'>Blog</Link>
                     </div>
                     <div className='item'>
-                        <Link className='link-loja' to='/loja'>Loja</Link>
+                        <Link className='link-loja' to='/'>Loja</Link>
                     </div>
                    
                     <div className='icons'>

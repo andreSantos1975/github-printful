@@ -16,7 +16,7 @@ export const Products = ({ printfulData }) => {
  /// Filtrar os produtos em destaque
  const featuredProducts = printfulData?.result || [];
 
- console.log("printfulData Products", featuredProducts)//........................................................log
+ ///console.log("printfulData Products", featuredProducts)//........................................................log
 
   const handleChange = (e) => {
     const value = e.target.value;
@@ -31,7 +31,7 @@ export const Products = ({ printfulData }) => {
   }
 
 
-  console.log("SELECTED-SUB-CATEGORIA", selectedSubCats);//......................................log
+  ///console.log("SELECTED-SUB-CATEGORIA", selectedSubCats);//......................................log
   
   return (
     <div className='products'>

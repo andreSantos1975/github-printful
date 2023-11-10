@@ -46,18 +46,14 @@ export const Product = () => {
     fetchData();
   }, [id]);
 
-  // Resto do seu componente
   return (
     <div className='product'>
       {loading ? "loading..." : (
         <>
           <div className='left'>
             <div className="images">
-
-              {/* Adicione mais imagens conforme necessário */}
             </div>
             <div className="manImg">
-              {/* Renderize as informações do produto com base no array productData */}
               {productData.map((item, index) => (
                 <div key={index}>
                   <h1>{item.syncProduct.name}</h1>
@@ -67,12 +63,10 @@ export const Product = () => {
             </div>
           </div>
           <div className='right'>
-            {/* Renderize as informações do produto com base no array productData */}
             {productData.map((item, index) => (
               <div key={index}>
                 <h5>{item.syncProduct.name}</h5>
-                <span className='price'>${item.syncVariants[0].product && item.syncVariants[0].retail_price}</span>
-                {/*syncVariants[0].prduct.name é uma descrição do produto*/}
+                <span className='price'>R${item.syncVariants[0].product && item.syncVariants[0].retail_price}</span>
                 <p>{item.syncVariants[0].product && item.syncVariants[0].product.name}</p>
                 <div className="quantity">
                   <button onClick={() => setQuantity((prev) => (prev === 1 ? 1 : prev - 1))}>-</button>
