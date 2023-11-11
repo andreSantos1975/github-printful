@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Link, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import './AllProducts.scss';
+import Banner from '../slider/Banner';
 
 export const AllProducts = () => {
   const [allProductsData, setAllProductsData] = useState(null);
@@ -52,6 +53,7 @@ export const AllProducts = () => {
 
     return (
       <div className='allProducts'>
+        <Banner />
         {renderizarGruposDeProdutos(gruposDeProdutos)}
       </div>
     );

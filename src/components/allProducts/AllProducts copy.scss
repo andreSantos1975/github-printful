@@ -1,0 +1,57 @@
+.allProducts {
+    margin-top: 77px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; // Para criar espaçamento entre as imagens
+    gap: 20px; // Espaço entre os grupos de produtos
+  
+    .grupo-de-produtos {
+      width: 100%; // O grupo de produtos ocupa a largura total
+      display: flex;
+      justify-content: space-between; // Espaçamento entre os produtos
+  
+      .produto {
+        width: 25%; // Cada produto ocupa 25% da largura do grupo
+        margin-bottom: 20px; // Espaçamento entre os produtos
+  
+        h2 { 
+          font-size: 16px;
+          font-weight: 400;
+          margin-top: 15px; /* Adicione um espaço entre a imagem e o nome */
+      }
+  
+        img {
+          max-width: 100%; // Garante que as imagens não ultrapassem o contêiner
+          height: auto; // Mantém a proporção original da imagem
+        }
+      }
+    }
+    // Banner.scss
+.banner {
+  width: 100%;
+  height: 550px;
+  overflow: hidden;
+
+  @media screen and (max-width: 768px) {
+    width: 1500px;
+    height: 1500px;
+    margin-left: 140px;
+  }
+
+  img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+
+    @media screen and (max-width: 768px) {
+      width: 1500px;
+      height: 1500px;
+      
+    }
+  }
+
+ 
+}
+
+  }
+  

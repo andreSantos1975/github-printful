@@ -1,3 +1,4 @@
+
 .navbar {
     position: fixed;
     height: 70px;
@@ -27,7 +28,7 @@
 
         .left {
             display: flex;
-            margin-left: 90px;
+            margin-left: 190px;
             align-items: center;
             gap: 25px;
 
@@ -117,6 +118,7 @@
 
             .center-custom {
                 display: none;
+               
             }
 
 
@@ -137,6 +139,7 @@
                 }
 
                 .item-img {
+                  
                     margin-left: 119px;
                 }
 
@@ -212,7 +215,7 @@
                 display: flex;
                 margin: 1px;
                 // align-items: center;
-                margin-left: 100px;
+                //margin-left: 100px;
                 // margin-right: 200px;
                 order: 3;
 

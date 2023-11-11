@@ -8,6 +8,7 @@ import { useDispatch } from 'react-redux';
 import { useLocation } from 'react-router-dom'; // Importa useLocation
 import { resetCart } from '../../redux/cartReducer'; // Importa resetCart
 import ListProduct from '../../listProduct';
+import Banner from '../../components/slider/Banner';
 
 
 
@@ -31,6 +32,7 @@ export const Home = () => {
   return (
     <div className='home'>
       {/*<Slider />*/}
+      <Banner />
       <ListProduct setPrintfulData={setPrintfulData} /> {/* Passa a função setPrintfulData como prop */}
       <FeaturedProducts type='nova' printfulData={printfulData} />
       <Categories />

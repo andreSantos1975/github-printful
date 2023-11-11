@@ -3,9 +3,9 @@ import EastOutlinedIcon from "@mui/icons-material/EastOutlined";
 import WestOutlinedIcon from "@mui/icons-material/WestOutlined";
 import './Slider.scss';
 
-import image1 from '../slider/image/dog1.jpg'
-import image2 from '../slider/image/dog2.jpg'
-import image3 from '../slider/image/dog3.jpg'
+//import image1 from '../slider/imgSlider/dog1.jpg'
+//import image2 from '../slider/imgSlider/dog2.jpg'
+//import image3 from '../slider/imgSlider/dog3.jpg'
 
 export const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);

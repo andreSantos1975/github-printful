@@ -56,7 +56,7 @@ export const Product = () => {
             <div className="manImg">
               {productData.map((item, index) => (
                 <div key={index}>
-                  <h1>{item.syncProduct.name}</h1>
+                  <h1 style={{ color: '#999' }}>{item.syncProduct.name}</h1>
                   <img src={item.syncProduct.thumbnail_url} alt="" className='mainImg' />
                 </div>
               ))}

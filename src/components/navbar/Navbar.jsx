@@ -1,7 +1,4 @@
 import React, { useState } from 'react';
-
-
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import SearchIcon from "@mui/icons-material/Search";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
@@ -11,11 +8,10 @@ import "./Navbar.scss"
 import { Cart } from '../cart/Cart';
 import { useSelector } from 'react-redux';
 
-
 export const Navbar = () => {
 
     const [open, setOpen] = useState(false);
-    const products = useSelector(state=>state.cart.products);
+    const products = useSelector(state => state.cart.products);
 
     return (
         <div className='navbar'>
@@ -23,13 +19,10 @@ export const Navbar = () => {
                 <div className='left'>
                     <div className='item-img'>
                         <img src='../img/en.png' alt='' />
-                       
                     </div>
                     <div className='item-melzinha'>
                         <span className='span-melzinha'>PetPrints</span>
-                        
                     </div>
-                
                 </div>
                 <div className='center center-custom' style={{ marginBottom: '-5px' }}>
                     <Link className='link' to='/'>PetPrints</Link>
@@ -44,7 +37,6 @@ export const Navbar = () => {
                     <div className='item'>
                         <Link className='link-loja' to='/loja'>Loja</Link>
                     </div>
-                   
                     <div className='icons'>
                         <SearchIcon />
                         <PersonOutlineOutlinedIcon />
