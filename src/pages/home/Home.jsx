@@ -2,20 +2,29 @@ import React, { useEffect, useState } from 'react';
 import './Home.scss';
 //import { Slider } from '../../components/slider/Slider';
 import { FeaturedProducts } from '../../components/featuredProducts/FeaturedProducts';
+import { FeaturedProducts2 } from '../../components/FeaturedProducts2/FeacturedProduct2';
 import { Categories } from '../../components/categories/Categories';
 import { Contact } from '../../components/contact/Contact';
 import { useDispatch } from 'react-redux';
 import { useLocation } from 'react-router-dom'; // Importa useLocation
 import { resetCart } from '../../redux/cartReducer'; // Importa resetCart
 import ListProduct from '../../listProduct';
+import ListProduct2 from '../../listProduct2';
 import Banner from '../../components/slider/Banner';
+import ListCollection from '../../listCollection';
+import ListCollection2 from '../../listConnection2';
+import { Collection } from '../../components/collection/Collection';
+import { Collection2 } from '../../components/collection2/Collection2';
 
 
 
 export const Home = () => {
   const location = useLocation();
   const dispatch = useDispatch();
-  const [printfulData, setPrintfulData] = useState(null); // Estado para armazenar os dados do servidor Printful
+  const [printfulData, setPrintfulData] = useState(null); 
+  const [printfulData2, setPrintfulData2] = useState(null); 
+  const [printful, setPrintful] = useState(null);
+  const [printful2, setPrintful2] = useState(null);
 
 
   useEffect(() => {
@@ -33,10 +42,16 @@ export const Home = () => {
     <div className='home'>
       {/*<Slider />*/}
       <Banner />
-      <ListProduct setPrintfulData={setPrintfulData} /> {/* Passa a função setPrintfulData como prop */}
-      <FeaturedProducts type='nova' printfulData={printfulData} />
+      <ListProduct setPrintfulData={setPrintfulData} /> 
+      <ListProduct2 setPrintfulData2={setPrintfulData2}/>
+      <ListCollection setPrintful={setPrintful}/>
+      <ListCollection2 setPrintful2={setPrintful2}/>
+
+      <FeaturedProducts printfulData={printfulData} />
+      <FeaturedProducts2 printfulData2={printfulData2} />
       <Categories />
-    
+      <Collection printful={printful}/>
+      <Collection2  printful2={printful2}/>
       <Contact />
     </div>
   );

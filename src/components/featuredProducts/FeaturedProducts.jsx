@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './FeaturedProducts.scss';
 import { Card } from '../card/Card';
 
-
 export const FeaturedProducts = ({ type, printfulData }) => {
 
   const [loading, setLoading] = useState(false);
@@ -16,12 +15,11 @@ export const FeaturedProducts = ({ type, printfulData }) => {
 
     console.log('featuredProducts', featuredProducts); // Log dos produtos em destaque
     console.log(featuredProducts);//--------printfulData FeaturedProducts-----------------------------------log
-    
 
     return (
       <div className='featuredProducts'>
         <div className='top'>
-          <h1>{type} coleção</h1>
+          <h1>Produtos em destaque</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas.</p>
         </div>
         <div className='bottom'>
@@ -34,7 +32,7 @@ export const FeaturedProducts = ({ type, printfulData }) => {
     return (
       <div className='featuredProducts'>
         <div className='top'>
-          <h1>{type} coleção</h1>
+          <h1>Produto em Destaque</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas.</p>
         </div>
         <div className='bottom'>

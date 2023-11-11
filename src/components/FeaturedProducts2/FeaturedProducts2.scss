@@ -1,0 +1,74 @@
+
+.featuredProducts {
+    margin: 120px 80px;
+    margin-left: 6px;
+    margin-top: -30px;
+
+    @media (max-width: 768px) {
+        margin: 100px 160px;
+        margin-left: 16px;
+
+        // Outras regras de estilo para telas menores
+        .image {
+            width: 100%;
+            max-width: 100%; // Definir largura máxima igual à largura da tela
+            height: auto; // Manter a proporção da imagem
+            overflow: hidden;
+            position: relative;
+        }
+    }
+
+    .top {
+        display: flex;
+        margin-bottom: 56px;
+        margin-right: 63px;
+       // margin-left: 25px;
+        flex-direction: column; // Alterado para exibir os elementos em coluna
+        align-items: center; // Centralizar os elementos horizontalmente
+        text-align: center; // Centralizar o texto
+
+        @media (max-width: 768px) {
+
+            display: flex;
+            flex-direction: column; // Alterado para exibir os elementos em coluna
+            align-items: center; // Centralizar os elementos horizontalmente
+            text-align: center; // Centralizar o texto
+            width: 500px;
+            margin-left: 100px;
+
+        }
+
+        h1 {
+            text-transform: capitalize;
+            margin-top: 60px; // Adicione algum espaço superior para o h1
+            margin-left: -15px;
+
+            @media (max-width: 768px) {
+                margin-left: -80px;
+
+            }
+        }
+
+        p {
+            color: gray;
+            padding: 10px; // Reduza o preenchimento para dar mais espaço ao texto
+            margin: 0;
+            font-size: 18px;
+            font-weight: 300;
+            text-align: center;
+            margin-top: 44px;
+        }
+    }
+
+    .botton {
+        display: flex;
+        margin-right: -110px;
+        justify-content: center;
+        gap: 50px;
+
+        @media (max-width: 768px) {
+            margin-right: 80px;
+
+        }
+    }
+}
