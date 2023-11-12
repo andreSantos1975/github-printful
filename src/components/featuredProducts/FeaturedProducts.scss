@@ -20,9 +20,10 @@
 
     .top {
         display: flex;
+        margin-top: -140px;
         margin-bottom: 56px;
         margin-right: 63px;
-       // margin-left: 25px;
+        margin-left: 125px;
         flex-direction: column; // Alterado para exibir os elementos em coluna
         align-items: center; // Centralizar os elementos horizontalmente
         text-align: center; // Centralizar o texto
@@ -63,6 +64,7 @@
     .botton {
         display: flex;
         margin-right: -110px;
+        
         justify-content: center;
         gap: 50px;
 
