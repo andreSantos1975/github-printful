@@ -28,7 +28,8 @@ export const Footer = () => {
         </div>
         <div className='item'>
           <h1>Contatos</h1>
-          <span>Rua Major Floriano Peixoto Fortaleza capital CE.</span>
+          <span>Rua Major Floriano Peixoto Fortaleza capital Ceara.
+          Perto da ponte metálica.</span>
         </div>
       </div>
       <div className='botton'>

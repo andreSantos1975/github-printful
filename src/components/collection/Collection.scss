@@ -58,6 +58,12 @@
             font-weight: 300;
             text-align: center;
             margin-top: 44px;
+
+            @media (max-width: 768px) {
+                margin-left: 480px;
+                margin: 0;
+
+            }
         }
     }
 

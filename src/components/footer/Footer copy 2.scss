@@ -1,6 +1,6 @@
 .footer {
  
-    margin: 250px 45px 30px 45px;
+    margin: 150px 45px 3px 45px;
     margin-right: -43px;
 
     @media (max-width: 768px) {
@@ -16,19 +16,7 @@
         gap: 20px;
         /* Reduzindo o espaçamento entre os itens */
 
-        @media (min-width: 769px) {
-            .footer {
-                margin-right: 100px;
-            }
-
-            flex-direction: row;
-            gap: 50px;
-            margin-right: 100px;
-
-            .item {
-                margin-right: 200px;
-            }
-        }
+   
 
         .item {
             flex: 1;
