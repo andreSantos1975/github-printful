@@ -34,7 +34,7 @@ export const Footer = () => {
       </div>
       <div className='botton'>
         <div className='left'>
-          <span className='logo'>Melzinha</span>
+          <span className='logo'>PetPrints</span>
           <span className='copyright'>&copy; {new Date().getFullYear()} copyright</span>
         </div>
         <div className='right'>

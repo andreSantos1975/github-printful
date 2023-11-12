@@ -53,7 +53,7 @@ export const AllProducts = () => {
 
     return (
       <div className='allProducts'>
-        <Banner />
+        {/*<Banner />*/}
         {renderizarGruposDeProdutos(gruposDeProdutos)}
       </div>
     );
