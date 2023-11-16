@@ -9,8 +9,9 @@
   justify-content: center;
 
   @media (max-width: 768px) {
-    margin-left: -100px;
-    width: 100%;
+    margin-left: -100px; // Pode ajustar conforme necessário
+    margin-bottom: -15px; // Adiciona um ajuste fino para melhor posição
+    width: calc(100% + 200px); // Ajusta a largura para ocupar mais espaço e centralizar
   }
 
 }
@@ -19,6 +20,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+
 
   input {
     padding: 10px;
