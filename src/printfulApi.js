@@ -2,7 +2,7 @@ import axios from 'axios';
 
 //Responsável por mandar o id do produto para ser exibido no componente Product e posteriomente para Cart
 
-const getPrintfulData = async (id) => {
+const getPrintfulData = async () => {
   try {
     // Fazer a chamada POST para o seu servidor intermediário com o "id"
     const response = await axios.post('http://localhost:3001/printful/stores', { productIds: [id] }); 

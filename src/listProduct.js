@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const ListProduct = ({ setPrintfulData }) => {
+const ListProduct = ({ PrintfulData }) => {
 
   const [data, setData] = useState(null);
   const productIds = ["326656640", "326613608", "326613366"]; // Defina productIds no escopo do componente

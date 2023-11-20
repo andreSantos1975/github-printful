@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const ListProduct2 = ({ setPrintfulData2 }) => {
+const ListProduct2 = ({ SetPrintfulData2 }) => {
 
   const [data, setData] = useState(null);
   const productIds = ["326656640", "326613608", "326613366"]; // Defina productIds no escopo do componente
@@ -15,7 +15,7 @@ const ListProduct2 = ({ setPrintfulData2 }) => {
         ///console.log('Informações dos produtos Array:', productInfoArray);//----------------------productInfoArray---log
 
         setData(response.data);
-        setPrintfulData2(response.data); // Define os dados no estado do componente Home
+        setPrintfulData(response.data); // Define os dados no estado do componente Home
       })
       .catch((error) => {
         console.error('Erro ao buscar informações dos produtos:', error);
